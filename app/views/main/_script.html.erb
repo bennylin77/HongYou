@@ -1,0 +1,41 @@
+<script>
+var controller;
+$(document).ready(function(){
+	
+	$('a[href^="#"]').on('click',function (e) {
+	    e.preventDefault();
+
+	    var target = this.hash;
+	    var $target = $(target);
+
+	    $('html, body').stop().animate({
+	        'scrollTop': $target.offset().top
+	    }, 900, 'swing', function () {
+	        window.location.hash = target;
+	    });
+	});
+	
+	// init controller
+	controller = new ScrollMagic();	
+	new ScrollScene({triggerElement: ".index_top_container"})
+								.setTween(TweenMax.fromTo(".top_arrow_container", 0.6,
+									{top: '0px'},
+									{top: '20px', repeat: -1, yoyo: true, ease: Circ.easeInOut}
+								))
+								.addTo(controller);	
+/*								
+	new ScrollScene({triggerElement: ".index_middle_section"})
+								.setTween(TweenMax.from(".H_logo", 0.6, {top: "-100px", ease: Linear.easeNone}))
+								.addTo(controller);										
+	new ScrollScene({triggerElement: ".index_middle_section"})
+								.setTween(TweenMax.from(".I_logo", 0.6, {top: "-200px", ease: Linear.easeNone}))
+								.addTo(controller);			
+	new ScrollScene({triggerElement: ".index_middle_section"})
+								.setTween(TweenMax.from(".Y_logo", 0.6, {right: "-20px", ease: Linear.easeNone}))
+								.addTo(controller);	
+	new ScrollScene({triggerElement: ".index_bottom_section"})
+								.setTween(TweenMax.to(".index_bottom_container", 1, {autoAlpha: 1, ease: Linear.easeNone}))
+								.addTo(controller);	
+*/																															
+});
+</script>	

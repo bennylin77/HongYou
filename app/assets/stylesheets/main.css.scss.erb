@@ -1,0 +1,86 @@
+body{
+  background: #a1a1a1;
+}
+.menu{
+  background: none;
+  border: none;
+}
+.navbar-right li a{
+  letter-spacing: 2px;
+  font-size: 16px;
+  color: #ffffff !important;
+}
+.navbar-right li a:hover, .navbar-right li a:active, .navbar-right li a:focus{
+  background: none;
+}
+.navbar-right li a{
+  letter-spacing: 2px;
+  font-size: 16px;
+  color: #ffffff !important;
+}
+//===============================index============================//
+
+.index_top_container{
+  background-image: url(<%=asset_path 'index_top_bg.jpg'%>);  
+  background-attachment: scroll;
+  background-position: center center;   
+  background-size: cover;
+  height: 100vh;    
+  color: #ffffff;
+  font-weight: bold;
+}
+.index_top_container .top_HY_container{
+    margin: 0 auto;
+    width: 410px;
+    margin-top: 40vh;
+    font-size: 55px;
+    height: 90px;
+    line-height: 90px;
+    letter-spacing: 5px;
+    border: 2px solid #ffffff;
+}
+.index_top_container .top_1998_container{
+    margin: 0 auto;
+    width: 410px;
+    margin-top: 20px;
+}
+.top_1998_container h2.no-background {
+    position: relative;
+    overflow: hidden;  
+    span {
+        display: inline-block;
+        vertical-align: baseline;
+        zoom: 1;
+        *display: inline;
+        *vertical-align: auto;
+        position: relative;
+        padding: 0 20px;
+        font-size: 20px;
+        letter-spacing: 2px;
+        &:before, &:after {
+            content: '';
+            display: block;
+            width: 1000px;
+            position: absolute;
+            top: 0.5em;
+            border-top: 2px solid #ffffff;
+        }
+        &:before { right: 100%; }
+        &:after { left: 100%; }
+    }
+}
+.top_arrow_container{
+  position: relative;
+  margin: 0px auto;
+  width: 80px;
+  top: 0px;  
+} 
+.arrow_down{
+  width: 100%;
+}
+
+@media (max-width: 1195px) {
+  .farmer_video_container{
+    margin-top: 50px;  
+  }
+}
