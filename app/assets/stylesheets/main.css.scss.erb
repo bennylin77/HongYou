@@ -18,8 +18,20 @@ body{
   font-size: 16px;
   color: #ffffff !important;
 }
+.title_container{
+  
+}
+.title_en{
+  font-family: Arial Black;
+  font-size: 33px;
+  display: inline-block;
+}
+.title_ch{
+  font-size: 18px;  
+  letter-spacing: 6px;
+  display: inline-block;  
+}
 //===============================index============================//
-
 .index_top_container{
   background-image: url(<%=asset_path 'index_top_bg.jpg'%>);  
   background-attachment: scroll;
@@ -78,9 +90,26 @@ body{
 .arrow_down{
   width: 100%;
 }
-
 @media (max-width: 1195px) {
-  .farmer_video_container{
-    margin-top: 50px;  
-  }
+
+}
+//===============================about============================//
+.index_about_section{
+  background: #ffffff;
+  padding: 150px 0px;
+}
+.index_about_content{
+  color: #4E4C4C;
+  font-size: 16px;
+  line-height: 30px;
+}
+//===============================organization============================//
+.index_organization_section{
+  background-image: url(<%=asset_path 'organization_bg.jpg'%>);  
+  background-attachment: scroll;
+  background-position: center center;   
+  background-size: cover;
+  padding: 150px 0px;  
+  color: #ffffff;
+  font-weight: bold;
 }
