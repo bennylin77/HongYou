@@ -72,37 +72,37 @@
 				</div>				
 			</div>
 		</div>	
-		<div class="row organization_line_container" style="min-height: 50px;">	
+		<div class="row organization_line_container hidden-xs" style="min-height: 50px;">	
 			<div class="col-md-offset-1 col-md-10">			
 				<div class="vertical_ball_line"></div>			
 			</div>		
 		</div>				
-		<div class="row organization_line_container">	
-			<div class="col-md-offset-1 col-md-5">			
+		<div class="row organization_line_container hidden-xs">	
+			<div class="col-sm-offset-1 col-sm-5">			
 				<div class="horizontal_ball_line_1"></div>			
 			</div>
-			<div class="col-md-5">			
+			<div class="col-sm-5">			
 				<div class="horizontal_ball_line_2"></div>			
 			</div>			
 		</div>			
 		<div class="row text-center">
-            <div class="col-md-offset-1 col-md-2" style="min-height: 200px;">
+            <div class="col-sm-offset-1 col-sm-2" style="min-height: 200px;">
                <div class="ball_line"></div>
                <div class="organization_balls">工程部</div>
             </div>             
-            <div class="col-md-2" style="min-height: 200px;">
+            <div class="col-sm-2" style="min-height: 200px;">
             	<div class="ball_line"></div>
                <div class="organization_balls">工一部</div>
             </div>                   
-            <div class="col-md-2" style="min-height: 200px;">
+            <div class="col-sm-2" style="min-height: 200px;">
                <div class="ball_line"></div>
                <div class="organization_balls">工二部</div>
             </div>  
-            <div class="col-md-2" style="min-height: 200px;">
+            <div class="col-sm-2" style="min-height: 200px;">
                <div class="ball_line"></div>
                <div class="organization_balls">工三部</div>
             </div>                                                                            	
-            <div class="col-md-2" style="min-height: 200px;">
+            <div class="col-sm-2" style="min-height: 200px;">
                <div class="ball_line"></div>
                <div class="organization_balls">會計部</div>
             </div>
@@ -171,17 +171,53 @@
 	<div class="container">
 		<div class="row">	
 			<div class="col-md-12">
-				<div class="title_container text-right">				
-					<div class="title_en text-left" style="width: 130px;">Business</div>
+				<div class="title_container text-left">				
+					<div class="title_en" style="width: 130px;">Business</div>
 					<div class="title_ch">|營業項目</div>
 				</div>				
 			</div>
 		</div>
-		<div class="row">	
-			<div class="col-md-12">
-				<div style="margin-top: 35px;">
+		<div class="row" style="margin-top: 50px;">	
+			<div class="col-sm-6">
+				<div class="business_item">純水/廢水/化學系統/定位/安裝</div>
+				<div class="business_item">PFA.PVDF.PP.CPVC.PVC製程管路配管</div>
+				<div class="business_item">Chemical.Dl.Exhaust.PCW.Drain機台Hook up</div>
+				<div class="business_item">半導體化學濕蝕刻設備</div>
+				<div class="business_item">半導體濕式清洗設備</div>
+				<div class="business_item">半導體工廠附屬設備及週邊工程</div>
+				<div class="business_item">廢氣處理系統設計/施工</div>
+				<div class="business_item">PP/PPS/PVC/FRP工業排風工程</div>
+				<div class="business_item">電子廠廢酸/廢溶劑回收設備</div>
+			</div>
+			
+			
+			<div class="col-sm-6 hidden-xs">
+			<%=image_tag 'business_pic.png', class: 'business_pic'%>		
+			<div class="parent-container">
+			<a href="<%= asset_url 'business/c_1.jpg'%>">
+			<div style="top: 250px; right: 510px;" class="index_business_img_pop_div"></div>		
+			</a>
+			<a href="<%= asset_url '/business/c_2.jpg'%>">
+			<div style="top: 250px; right: 290px;" class="index_business_img_pop_div"></div>		
+			</a>
+			<a href="<%= asset_url '/business/c_3.jpg'%>">
+			<div style="top: 250px; right: 70px;" class="index_business_img_pop_div"></div>		
+			</a>
+			<a href="<%= asset_url '/business/c_4.jpg'%>">
+			<div style="top: 470px; right: 510px;" class="index_business_img_pop_div"></div>		
+			</a>
+			<a href="<%= asset_url '/business/c_5.jpg'%>">
+			<div style="top: 470px; right: 290px;" class="index_business_img_pop_div"></div>		
+			</a>
+			<a href="<%= asset_url '/business/c_6.jpg'%>">
+			<div style="top: 470px; right: 70px;" class="index_business_img_pop_div"></div>		
+			</a>																		
+			</div>
 
-				</div>			
+
+
+
+		
 			</div>
 		</div>		
 	</div>

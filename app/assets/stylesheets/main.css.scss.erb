@@ -5,6 +5,12 @@ body{
   background: rgba(56, 90, 173, 0.8);
   border: none;
 }
+.navbar-toggle:hover, .navbar-toggle:active, .navbar-toggle:focus{
+  background: rgba(45, 72, 139, 0.8) !important;  
+}
+.navbar-toggle .icon-bar{
+  background: #ffffff !important;
+}
 .navbar-brand{
   color: #ffffff !important;
 }
@@ -102,8 +108,26 @@ body{
 .arrow_down{
   width: 100%;
 }
-@media (max-width: 1195px) {
-
+@media (max-width: 768px) {
+  .index_top_container .top_HY_container{
+      width: 280px;
+      margin-top: 30vh;
+      font-size: 38px;
+      line-height: 70px;
+      letter-spacing: 5px;
+      border: 2px solid #ffffff;
+  }
+  .top_HY_container_ch{
+      font-size: 18px;
+  }
+  .index_top_container .top_1998_container{
+      width: 280px;
+  }
+  .top_1998_container h2.no-background {
+      span {
+          font-size: 18px;
+      }
+  }
 }
 //===============================about============================//
 .index_about_section{
@@ -226,7 +250,6 @@ body{
   padding-right: 0px; 
   margin-bottom: 16px;  
 }
-
 .project_section_image_top{
   padding: 150px 0px;
   width:100%;
@@ -243,6 +266,8 @@ body{
 }
 
 
+
+
 .index_fruits_category{
     color: #ffffff;
     width: 200px;  
@@ -254,8 +279,6 @@ body{
 .no-touch .index_fruits_category:hover{
     background: rgba(56, 90, 173, 0.8);
 }
-
-
 .index_fruits_category_s{
   font-size: 20px;  
   margin-bottom: 10px;
@@ -263,9 +286,28 @@ body{
 .index_fruits_category_l{
   font-size: 33px;
 }
+
 //===============================business============================//
 .index_business_section{
   padding: 150px 0px;  
   color: #ffffff;
   font-weight: bold;
+}
+.business_item{
+  font-size: 16px;
+  height: 37px;
+  line-height: 37px;
+  letter-spacing: 1px;
+}
+.index_business_img_pop_div{
+  -ms-transform: rotate(45deg); 
+  -webkit-transform: rotate(45deg); 
+  transform: rotate(45deg);     
+  background: none; 
+  width: 140px; 
+  height: 140px;
+  position: absolute;  
+}
+.index_business_img_pop_div:hover{  
+  background: rgba(255, 255, 255, 0.2); 
 }
