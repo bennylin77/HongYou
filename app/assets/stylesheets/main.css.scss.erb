@@ -18,12 +18,15 @@ body{
   font-size: 16px;
   color: #ffffff !important;
 }
+.navbar-right li.active a{
+  background: rgba(45, 72, 139, 0.8) !important;
+}
 .title_container{
   
 }
 .title_en{
   font-family: Arial Black;
-  font-size: 33px;
+  font-size: 25px;
   display: inline-block;
 }
 .title_ch{
@@ -137,13 +140,48 @@ body{
 .organization_manager_en{
   font-size: 50% 
 }
+.vertical_ball_line, .ball_line, .horizontal_ball_line_1, .horizontal_ball_line_2{
+  position: relative;
+  background: transparent;
+  width: 0px;
+  height: 0px;
+  background-color: #ffffff;
+}
+.horizontal_ball_line_1, .horizontal_ball_line_2 {
+  position: absolute;
+}
+.vertical_ball_line{
+  left: 50%;
+  top: 0;
+  height: 50px;
+  width: 2px;
+}
+.horizontal_ball_line_1{
+  bottom: 0;
+  right: 0;
+  width: 80%;
+  height: 2px;  
+}
+.horizontal_ball_line_2{
+  bottom: 0;
+  left: 2px;
+  width: 80%;
+  height: 2px;  
+}
+.ball_line{
+  left: 50%;
+  top: 0;
+  height: 50px;
+  width: 2px;
+}
 .organization_balls{
+  visibility: hidden;
   font-size: 18px;  
-  margin: 0 auto;
-  width: 100px;
-  height: 100px;  
-  line-height: 100px;
-  border-radius: 100px;
+  margin: 20px auto;
+  width: 150px;
+  height: 150px;  
+  line-height: 150px;
+  border-radius: 150px;
   border: 2px solid #ffffff;  
   
 }

@@ -10,11 +10,11 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">關於鴻佑</a></li>
-        <li><a href="#">營業項目</a></li>
-        <li><a href="#">工程實績</a></li>
-        <li><a href="#">工作機會</a></li>
-        <li><a href="#">聯絡我們</a></li>        
+        <li class="page-scroll"><a href="#section_about">關於鴻佑</a></li>
+        <li class="page-scroll"><a href="#">營業項目</a></li>
+        <li class="page-scroll"><a href="#">工程實績</a></li>
+        <li class="page-scroll"><a href="#">工作機會</a></li>
+        <li class="page-scroll"><a href="#">聯絡我們</a></li>        
       </ul>
     </div>
   </div>
@@ -34,7 +34,15 @@
 				$('.navbar').fadeOut();
 			}
 		});
+		
+	    $('body').on('click', '.page-scroll a', function(event) {
+	        var $anchor = $(this);
+	        $('html, body').stop().animate({
+	            scrollTop: $($anchor.attr('href')).offset().top
+	        }, 1000);
+	        event.preventDefault();
+	    });		
 	});
 });
 }(jQuery));
-</script>
+</script> 

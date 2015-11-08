@@ -22,13 +22,19 @@ $(document).ready(function(){
 									{top: '20px', repeat: -1, yoyo: true, ease: Circ.easeInOut}
 								))
 								.addTo(controller);	
-	new ScrollScene({triggerElement: ".index_top_container"})
-								.addTo(controller)
-								.on("end", function (e) {
-									$('.menu').css("background-color", "rgba(56, 90, 173, 0.8)")
-								})								
+							
+	var tween = new TimelineLite();
+	tween.fromTo(".vertical_ball_line", 1, {height:0, ease: Linear.easeNone}, {height:50, ease: Linear.easeNone})
+		 .fromTo(".horizontal_ball_line_1", 1, {width:0, ease: Linear.easeNone}, {width:'80%', ease: Linear.easeNone})	  	 
+		 .fromTo(".horizontal_ball_line_2", 1, {width:0, ease: Linear.easeNone}, {width:'80%', ease: Linear.easeNone})	  	 	  	 
+	  	 .fromTo(".ball_line", 1, {height:0, ease: Linear.easeNone}, {height:50, ease: Linear.easeNone})
+		 .to(".organization_balls", 1, {autoAlpha: 1, ease: Linear.easeNone})
 
-																
+	
+	tween.timeScale(3) //play faster   
+	new ScrollScene({triggerElement: ".index_organization_section"})
+				  .setTween(tween)
+				  .addTo(controller) 																
 /*								
 	new ScrollScene({triggerElement: ".index_middle_section"})
 								.setTween(TweenMax.from(".H_logo", 0.6, {top: "-100px", ease: Linear.easeNone}))
