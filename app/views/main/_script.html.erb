@@ -14,7 +14,6 @@ $(document).ready(function(){
 	        window.location.hash = target;
 	    });
 	});
-	
 	// init controller
 	controller = new ScrollMagic();	
 	new ScrollScene({triggerElement: ".index_top_container"})
@@ -23,6 +22,13 @@ $(document).ready(function(){
 									{top: '20px', repeat: -1, yoyo: true, ease: Circ.easeInOut}
 								))
 								.addTo(controller);	
+	new ScrollScene({triggerElement: ".index_top_container"})
+								.addTo(controller)
+								.on("end", function (e) {
+									$('.menu').css("background-color", "rgba(56, 90, 173, 0.8)")
+								})								
+
+																
 /*								
 	new ScrollScene({triggerElement: ".index_middle_section"})
 								.setTween(TweenMax.from(".H_logo", 0.6, {top: "-100px", ease: Linear.easeNone}))

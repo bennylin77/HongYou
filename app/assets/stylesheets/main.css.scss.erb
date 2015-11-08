@@ -2,7 +2,7 @@ body{
   background: #a1a1a1;
 }
 .menu{
-  background: none;
+  background: rgba(56, 90, 173, 0.8);
   border: none;
 }
 .navbar-right li a{
@@ -33,10 +33,13 @@ body{
 }
 //===============================index============================//
 .index_top_container{
+/*  
   background-image: url(<%=asset_path 'index_top_bg.jpg'%>);  
   background-attachment: scroll;
   background-position: center center;   
   background-size: cover;
+*/
+  background: transparent;
   height: 100vh;    
   color: #ffffff;
   font-weight: bold;
@@ -46,10 +49,13 @@ body{
     width: 410px;
     margin-top: 40vh;
     font-size: 55px;
-    height: 90px;
-    line-height: 90px;
+    line-height: 80px;
     letter-spacing: 5px;
     border: 2px solid #ffffff;
+}
+.top_HY_container_ch{
+    font-size: 20px;
+    line-height: 30px;  
 }
 .index_top_container .top_1998_container{
     margin: 0 auto;
@@ -105,11 +111,39 @@ body{
 }
 //===============================organization============================//
 .index_organization_section{
+/*  
   background-image: url(<%=asset_path 'organization_bg.jpg'%>);  
   background-attachment: scroll;
   background-position: center center;   
   background-size: cover;
+*/  
   padding: 150px 0px;  
   color: #ffffff;
   font-weight: bold;
+}
+.organization_manager_container{
+  margin: 0 auto;
+  width: 200px;
+  font-size: 28px;
+  border: 2px solid #ffffff;  
+  padding-top: 10px;
+  padding-bottom: 10px;  
+  padding-left: 5px;
+}
+.organization_manager_ch{
+  font-size: 100%; 
+  letter-spacing: 5px;  
+}
+.organization_manager_en{
+  font-size: 50% 
+}
+.organization_balls{
+  font-size: 18px;  
+  margin: 0 auto;
+  width: 100px;
+  height: 100px;  
+  line-height: 100px;
+  border-radius: 100px;
+  border: 2px solid #ffffff;  
+  
 }

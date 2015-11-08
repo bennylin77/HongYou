@@ -17,6 +17,7 @@
 //= require jquery.scrollmagic.debug.js
 //= require jquery.scrollmagic.js
 //= require modernizr.custom.min.js
+//= require parallax.js
 //= require TweenMax.min.js
 
 //= require_tree .
