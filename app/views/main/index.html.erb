@@ -1,17 +1,18 @@
+<div id="section_top"></div>
 <header class="index_top_container" data-parallax="scroll" data-image-src="<%= image_url 'index_top_bg.jpg' %>">
 	<div class="container text-center">
 		<div class="row">
 	        <div class="col-md-12">
 	            <div class="top_HY_container">
-	            	<div class="top_HY_container_en">HUNG-YOU</div>
-	            	<div class="top_HY_container_ch">鴻佑科技</div>       
+	            	<div class="top_HY_container_en">HONG-YOU</div>
+	            	<div class="top_HY_container_ch">鴻祐科技</div>       
 	            </div>
 	    	</div>
     	</div>
     	<div class="row">
 	        <div class="col-md-12">
 	            <div class="top_1998_container">
-	            	<h2 class="no-background"><span>since 1988</span></h2>
+	            	<h2 class="no-background"><span class="text">since <span class="since_year" data-year="1988" style="display: inline-block; min-width: 60px;"></span></span></h2>
 	            </div>
 	    	</div>   	  	
     	</div>	
@@ -179,15 +180,15 @@
 		</div>
 		<div class="row" style="margin-top: 50px;">	
 			<div class="col-sm-6">
-				<div class="business_item">純水/廢水/化學系統/定位/安裝</div>
-				<div class="business_item">PFA.PVDF.PP.CPVC.PVC製程管路配管</div>
-				<div class="business_item">Chemical.Dl.Exhaust.PCW.Drain機台Hook up</div>
-				<div class="business_item">半導體化學濕蝕刻設備</div>
-				<div class="business_item">半導體濕式清洗設備</div>
-				<div class="business_item">半導體工廠附屬設備及週邊工程</div>
-				<div class="business_item">廢氣處理系統設計/施工</div>
-				<div class="business_item">PP/PPS/PVC/FRP工業排風工程</div>
-				<div class="business_item">電子廠廢酸/廢溶劑回收設備</div>
+				<div class="business_item business_item_1">純水/廢水/化學系統/定位/安裝</div>
+				<div class="business_item business_item_2">PFA.PVDF.PP.CPVC.PVC製程管路配管</div>
+				<div class="business_item business_item_3">Chemical.Dl.Exhaust.PCW.Drain機台Hook up</div>
+				<div class="business_item business_item_4">半導體化學濕蝕刻設備</div>
+				<div class="business_item business_item_5">半導體濕式清洗設備</div>
+				<div class="business_item business_item_6">半導體工廠附屬設備及週邊工程</div>
+				<div class="business_item business_item_7">廢氣處理系統設計/施工</div>
+				<div class="business_item business_item_8">PP/PPS/PVC/FRP工業排風工程</div>
+				<div class="business_item business_item_9">電子廠廢酸/廢溶劑回收設備</div>
 			</div>
 			
 			
@@ -260,16 +261,37 @@
 				<div class="title_container text-right">				
 					<div class="title_en text-left" style="width: 150px;">Contact us</div>
 					<div class="title_ch">|聯絡我們</div>
+					<div style="font-size: 100px;">
+						<%=image_tag 'mail.svg', width: '70px;'%>			
+						<%=image_tag 'phone.svg', width: '70px;'%>
+					</div>
 				</div>				
 			</div>
 		</div>
 		<div class="row">	
-			<div class="col-md-12">
-				<div style="margin-top: 35px;">
-
-				</div>			
+			<div class="col-md-6">
+				<script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script>
+				<div style='overflow:hidden; height:400px;width:100%;'><div id='gmap_canvas_1' style='height:400px; width:100%;'></div>
+				<style>#gmap_canvas_1 img{max-width:none!important;background:none!important}</style></div> 
+				<script type='text/javascript'>function init_map(){var myOptions = {zoom:15,center:new google.maps.LatLng(25.0783467,121.32447409999997),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas_1'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(25.0783467,121.32447409999997)});infowindow = new google.maps.InfoWindow({content:'<strong>鴻祐桃園公司</strong><br>蘆竹區山林路三段432-1號<br> 桃園市<br>'});google.maps.event.addListener(marker, 'click', function(){});}google.maps.event.addDomListener(window, 'load', init_map);</script>		
 			</div>
+			<div class="col-md-6">
+				<div class="contact_branch_title">桃園公司</div>
+				<div class="contact_branch_address">桃園市蘆竹區山林路三段432-1號</div>
+			</div>			
 		</div>		
+		<div class="row" style="margin-top: 100px;">	
+			<div class="col-md-6">
+				<script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script>
+				<div style='overflow:hidden; height:400px;width:100%;'><div id='gmap_canvas_2' style='height:400px; width:100%;'></div>
+				<style>#gmap_canvas_2 img{max-width:none!important;background:none!important}</style></div> 
+				<script type='text/javascript'>function init_map(){var myOptions = {zoom:15,center:new google.maps.LatLng(24.783931630358797,120.98946392824179),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas_2'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(24.783931630358797,120.98946392824179)});infowindow = new google.maps.InfoWindow({content:'<strong>鴻祐新竹公司</strong><br>新竹市高翠路73巷1號<br> 新竹市<br>'});google.maps.event.addListener(marker, 'click', function(){});}google.maps.event.addDomListener(window, 'load', init_map);</script>		
+			</div>
+			<div class="col-md-6">
+				<div class="contact_branch_title">新竹公司</div>
+				<div class="contact_branch_address">新竹市高翠路73巷1號</div>
+			</div>			
+		</div>			
 	</div>
 </section>
 <%=render "script" %>
