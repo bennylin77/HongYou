@@ -7,13 +7,15 @@ $(document).ready(function(){
 	    e.preventDefault();
 
 	    var target = this.hash;
-	    var $target = $(target);
-
-	    $('html, body').stop().animate({
-	        'scrollTop': $target.offset().top
-	    }, 900, 'swing', function () {
-	        window.location.hash = target;
-	    });
+	    if(target!= '#myCarousel')
+	    {
+		    var $target = $(target);	
+		    $('html, body').stop().animate({
+		        'scrollTop': $target.offset().top
+		    }, 900, 'swing', function () {
+		        window.location.hash = target;
+		    });
+		}
 	});
 	// init controller
 	controller = new ScrollMagic();	
@@ -100,5 +102,8 @@ $(document).ready(function(){
 								.setTween(TweenMax.to(".index_bottom_container", 1, {autoAlpha: 1, ease: Linear.easeNone}))
 								.addTo(controller);	
 */																															
+});
+$('.carousel').carousel({
+  interval: 1000 * 6
 });
 </script>	

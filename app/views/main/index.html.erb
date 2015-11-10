@@ -59,7 +59,7 @@
 	<div class="container">
 		<div class="row">	
 			<div class="col-md-12">
-				<div class="title_container text-left">
+				<div class="title_container text-center">
 					<div class="title_en" style="width: 180px;">Organization</div>
 					<div class="title_ch">|組織架構</div>
 				</div>				
@@ -224,23 +224,120 @@
 	</div>
 </section>
 <div id="section_jobs"></div>
-<section class="index_about_section" id="index_about_section">
+<section class="index_jobs_section" id="index_jobs_section">
 	<div class="container">
 		<div class="row">	
-			<div class="col-md-10">
-				<div class="title_container text-left">
+			<div class="col-sm-12">
+				<div class="title_container text-center">
 					<div class="title_en" style="width: 70px; color: #3150a4;">Jobs</div>
 					<div class="title_ch">|工作機會</div>
 				</div>				
 			</div>
 		</div>
+	</div>	
+	<div class="container">
 		<div class="row">	
-			<div class="col-md-10">
+			<div class="col-sm-12">
 				<div style="margin-top: 35px;">
-					<!--<%= image_tag 'H.png', class: 'H_logo hidden-sm hidden-xs hidden-md' %>-->
-					<div class="index_about_content">
-					鴻祐科技前身為保儀工程有限公司成立於1988年5月，投入水處理與環保工作已逾30年的經驗。之前，曾服務於晃誼公司，專門負責純水、廢水、化學系統 定位、安裝，DI-LOOP配管，以及DI CHEMICAL EXHAUST PCW DRAIN HOOK-UP等工程....之後與ORGANO、 TOPCO、CHRIST 、台灣極水、彰化鍊水、兆聯實業等知名水處理工程公司合作。先後參與並完成台灣各大廠區如:TSMC、NANYA、INOTERA、MOSEL、PROMOS、UMC、CPT、VIS、新日光、景碩、華映等...公司各式水處理設備的施工及維修，對於個高科技廠房相關規定及流程皆有一定程度的了解。公司成立至今業蹟蒸蒸日上，並與各處水處理公司、半導體公司建立良好合作關係，可以完成特殊管路:PFA.PVDF .PP.CPVC.PVC等.....設計/套圖/繪圖/施工，施工品質可達到各廠區業主之需求標準。長期下來不斷更新增加設備，提升專業技術及員工加強訓練，使我們公司在工程界上建立良好的口碑。	
-					</div>
+
+
+
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <%Job.all.each_with_index do |j, index |%>    
+       	<%if index != 0 %>	
+       	<li data-target="#myCarousel" data-slide-to="<%=index%>"></li>
+      	<%else%>
+      	<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+		<%end%>
+      <%end%>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+	  <%Job.all.each_with_index do |j, index |%> 
+      <div class="item <%if index == 0 %>active<%end%>">
+      	<div class="carousel-content">
+	      	<div class="jobs_main_title"><%=j.title %></div>
+	      	<div class="jobs_title_container"><span class="jobs_title_ch">職務內容</span><span class="jobs_title_en">content</span></div>	
+	      	<div class="jobs_content"><%=j.content %></div>
+	      	<!--<div class="jobs_title_container"><span class="jobs_title_ch">工作地點</span><span class="jobs_title_en">location</span></div>		      	
+	      	<div class="jobs_content"><%=j.location %></div>
+	      	<div class="jobs_title_container"><span class="jobs_title_ch">工作性質</span><span class="jobs_title_en">kind</span></div>		      	
+	      	<div class="jobs_content"><%if j.part_time_c%>兼職<%else%>正職<%end%></div>
+	      	<div class="jobs_title_container"><span class="jobs_title_ch">需求人數</span><span class="jobs_title_en">quantity</span></div>		      	
+	      	<div class="jobs_content"><%=j.quantity %></div>-->
+			<div class="jobs_title_container"><span class="jobs_title_ch">描述</span><span class="jobs_title_en">description</span></div>		      	
+	      	<div class="jobs_content">		
+				<table class="table">
+				    <thead>
+				      <tr>
+				        <th class="text-center">地點</th>
+				        <th class="text-center">性質</th>
+				        <th class="text-center">需求人數</th>
+				      </tr>
+				    </thead>
+				    <tbody class="text-center">
+				      <tr>
+				        <td><%=j.location %></td>
+				        <td><%if j.part_time_c%>兼職<%else%>正職<%end%></td>
+				        <td><%=j.quantity %></td>
+				      </tr>
+				    </tbody>
+				  </table>				
+	      	</div>	      	
+	      	<div class="jobs_title_container"><span class="jobs_title_ch">具備要求</span><span class="jobs_title_en">requirement</span></div>		      	
+	      	<div class="jobs_content">		
+				<table class="table">
+				    <thead>
+				      <tr>
+				        <th class="text-center">工作經歷</th>
+				        <th class="text-center">學歷</th>
+				        <th class="text-center">科系</th>
+				      </tr>
+				    </thead>
+				    <tbody class="text-center">
+				      <tr>
+				        <td><%=j.experience %></td>
+				        <td><%=j.education %></td>
+				        <td><%=j.major %></td>
+				      </tr>
+				    </tbody>
+				  </table>				
+	      	</div>	 
+	      	<div class="jobs_title_container"><span class="jobs_title_ch">備註</span><span class="jobs_title_en">notes</span></div>			      	     	
+        	<div class="jobs_content"><%=j.note%></div>
+        	<div class="jobs_content" style="border-bottom: 1px solid rgba(45, 72, 139, 0.8); ">
+        		<a href="tel:03-6662578" class="btn">
+					聯絡人資
+				</a>
+			</div>
+        </div>      	
+      </div>
+	  <%end%>
+
+  
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+</div>
+
+
+
+
+
+
+
 				</div>			
 			</div>
 			<!--
@@ -254,7 +351,7 @@
 	</div>
 </section>
 <div id="section_contact"></div>
-<section class="index_business_section" id="index_business_section" data-parallax="scroll" data-image-src="<%= image_url 'contact_bg.jpg' %>">
+<section class="index_contact_section" id="index_contact_section" data-parallax="scroll" data-image-src="<%= image_url 'contact_bg.jpg' %>">
 	<div class="container">
 		<div class="row">	
 			<div class="col-md-12">
@@ -264,7 +361,7 @@
 				</div>				
 			</div>
 		</div>
-		<div class="row" style="margin-top: 100px;">	
+		<div class="row" style="margin-top: 80px;">	
 			<div class="col-md-6">
 				<div class="contact_branch_title">桃園公司</div>
 				<div class="contact_branch_address">桃園市蘆竹區山林路三段432-1號</div>
@@ -287,12 +384,12 @@
 			</div>	
 			<div class="col-md-6">
 				<script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script>
-				<div style='overflow:hidden; height:400px;width:100%;'><div id='gmap_canvas_1' style='height:400px; width:100%;'></div>
+				<div style='overflow:hidden; height:300px;width:100%;'><div id='gmap_canvas_1' style='height:400px; width:100%;'></div>
 				<style>#gmap_canvas_1 img{max-width:none!important;background:none!important}</style></div> 
 				<script type='text/javascript'>function init_map(){var myOptions = {zoom:15,center:new google.maps.LatLng(25.0783467,121.32447409999997),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas_1'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(25.0783467,121.32447409999997)});infowindow = new google.maps.InfoWindow({content:'<strong>鴻祐桃園公司</strong><br>蘆竹區山林路三段432-1號<br> 桃園市<br>'});google.maps.event.addListener(marker, 'click', function(){});}google.maps.event.addDomListener(window, 'load', init_map);</script>		
 			</div>					
 		</div>		
-		<div class="row" style="margin-top: 100px;">	
+		<div class="row" style="margin-top: 80px;">	
 			<div class="col-md-6">
 				<div class="contact_branch_title">新竹公司</div>
 				<div class="contact_branch_address">新竹市高翠路73巷1號</div>
@@ -315,7 +412,7 @@
 			</div>
 			<div class="col-md-6">
 				<script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script>
-				<div style='overflow:hidden; height:400px;width:100%;'><div id='gmap_canvas_2' style='height:400px; width:100%;'></div>
+				<div style='overflow:hidden; height:300px;width:100%;'><div id='gmap_canvas_2' style='height:400px; width:100%;'></div>
 				<style>#gmap_canvas_2 img{max-width:none!important;background:none!important}</style></div> 
 				<script type='text/javascript'>function init_map(){var myOptions = {zoom:15,center:new google.maps.LatLng(24.783931630358797,120.98946392824179),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas_2'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(24.783931630358797,120.98946392824179)});infowindow = new google.maps.InfoWindow({content:'<strong>鴻祐新竹公司</strong><br>新竹市高翠路73巷1號<br> 新竹市<br>'});google.maps.event.addListener(marker, 'click', function(){});}google.maps.event.addDomListener(window, 'load', init_map);</script>		
 			</div>					
