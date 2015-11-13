@@ -12,7 +12,7 @@
     	<div class="row">
 	        <div class="col-md-12">
 	            <div class="top_1998_container">
-	            	<h2 class="no-background"><span class="text">since <span class="since_year" data-year="1988" style="display: inline-block; min-width: 60px;"></span></span></h2>
+	            	<h2 class="no-background"><span class="text">since <span class="since_year" data-year="1998" style="display: inline-block; min-width: 60px;"></span></span></h2>
 	            </div>
 	    	</div>   	  	
     	</div>	
@@ -121,50 +121,7 @@
 				</div>				
 			</div>
 		</div>
-		<div class="row text-center" style="margin-top: 50px;">
-                <div class="col-sm-8 project_section_container_left">
-                    <div class="project_section_image_top" style="background-image: url(<%=asset_path 'projects/p1.jpg'%>);">
-					<div class="index_fruits_category">
-						<div class="index_fruits_category_s">TSMC</div>
-						<div class="index_fruits_category_l">台積電</div>
-					</div>
-					</div>                    		
-                </div>
-                <div class="col-sm-4 project_section_container_right">
-                    <div class="project_section_image_top" style="background-image: url(<%=asset_path 'projects/p2.jpg'%>); ">                    
-					<div class="index_fruits_category">
-						<div class="index_fruits_category_s">CPT</div>
-						<div class="index_fruits_category_l">華映</div>
-					</div>
-					</div>					                		
-                </div>                               
-    	</div>	
-		<div class="row text-center">
-    	        <div class="col-sm-4 project_section_container_left">
-                	<div class="project_section_image_bottom" style="background-image: url(<%=asset_path 'projects/p3.jpg'%>); ">                    
-					<div class="index_fruits_category">
-						<div class="index_fruits_category_s">inotera</div>
-						<div class="index_fruits_category_l">華亞</div>
-					</div>
-					</div>					                		
-                </div>  
-    	        <div class="col-sm-4 project_section_container_middle">
-                	<div class="project_section_image_bottom" style="background-image: url(<%=asset_path 'projects/p4.jpg'%>); ">                    
-					<div class="index_fruits_category">
-						<div class="index_fruits_category_s">facebook</div>
-						<div class="index_fruits_category_l">臉書</div>
-					</div>
-					</div>					                		
-                </div>  				
-    	        <div class="col-sm-4 project_section_container_right">
-                	<div class="project_section_image_bottom" style="background-image: url(<%=asset_path 'projects/p5.jpg'%>); ">                    
-					<div class="index_fruits_category">
-						<div class="index_fruits_category_s">Google</div>
-						<div class="index_fruits_category_l">谷歌</div>
-					</div>
-					</div>					                		
-                </div>                 		
-    	</div>	    	
+		<%=render 'projects' %>	    	
 	</div>
 </section>
 <div id="section_business"></div>
@@ -308,7 +265,7 @@
 				  </table>				
 	      	</div>	 
 	      	<div class="jobs_title_container"><span class="jobs_title_ch">備註</span><span class="jobs_title_en">notes</span></div>			      	     	
-        	<div class="jobs_content"><%=j.note%></div>
+        	<div class="jobs_content"><%if j.note.blank?%>--<%else%><%=j.note%><%end%></div>
         	<div class="jobs_content" style="border-bottom: 1px solid rgba(45, 72, 139, 0.8); ">
         		<a href="tel:03-6662578" class="btn">
 					聯絡人資
@@ -386,7 +343,6 @@
 				<script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script>
 				<div style='overflow:hidden; height:300px;width:100%;'><div id='gmap_canvas_1' style='height:400px; width:100%;'></div>
 				<style>#gmap_canvas_1 img{max-width:none!important;background:none!important}</style></div> 
-				<script type='text/javascript'>function init_map(){var myOptions = {zoom:15,center:new google.maps.LatLng(25.0783467,121.32447409999997),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas_1'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(25.0783467,121.32447409999997)});infowindow = new google.maps.InfoWindow({content:'<strong>鴻祐桃園公司</strong><br>蘆竹區山林路三段432-1號<br> 桃園市<br>'});google.maps.event.addListener(marker, 'click', function(){});}google.maps.event.addDomListener(window, 'load', init_map);</script>		
 			</div>					
 		</div>		
 		<div class="row" style="margin-top: 80px;">	
@@ -414,7 +370,6 @@
 				<script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script>
 				<div style='overflow:hidden; height:300px;width:100%;'><div id='gmap_canvas_2' style='height:400px; width:100%;'></div>
 				<style>#gmap_canvas_2 img{max-width:none!important;background:none!important}</style></div> 
-				<script type='text/javascript'>function init_map(){var myOptions = {zoom:15,center:new google.maps.LatLng(24.783931630358797,120.98946392824179),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas_2'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(24.783931630358797,120.98946392824179)});infowindow = new google.maps.InfoWindow({content:'<strong>鴻祐新竹公司</strong><br>新竹市高翠路73巷1號<br> 新竹市<br>'});google.maps.event.addListener(marker, 'click', function(){});}google.maps.event.addDomListener(window, 'load', init_map);</script>		
 			</div>					
 		</div>			
 	</div>

@@ -27,3 +27,4 @@ gem 'spring',        group: :development
 gem 'bootstrap-sass', '= 3.3.4.1'
 gem 'sass', '= 3.4.18'
 gem 'sass-rails', '= 5.0.1'
+gem "magnific-popup-rails"
