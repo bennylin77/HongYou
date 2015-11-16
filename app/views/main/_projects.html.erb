@@ -1,16 +1,8 @@
 <div class="row text-center" style="margin-top: 50px;">
-                <div class="col-sm-8 project_section_container_left">                 
-<!--
-					<div class="company_image_upper_container_outter">
-						<%=link_to asset_path('projects/p1.jpg'), class: 'zoom' do %>
-						<div class="company_image_upper_container" style="background-image: url('<%=asset_path 'projects/p1.jpg'%>')">	
-						</div>
-						<%end%>
-					</div>                    
--->                    
-                    <div class="project_section_image_container">
-						<%=link_to asset_path('projects/p1.jpg'), class: 'zoom', title: '描述0' do %>
-	                    <div class="project_section_image" style="background-image: url(<%=asset_path 'projects/p1.jpg'%>);">
+	<div class="col-sm-8 project_section_container_left">                               
+		<div class="project_section_image_container project_section_image_container_upper">
+						<%=link_to asset_path('projects/p1_cover.jpg'), class: 'zoom', title: '描述0' do %>
+	                    <div class="project_section_image" style="background-image: url(<%=asset_path 'projects/p1_cover.jpg'%>);">
 						<span class="overlay">
 							<div class="project_section_category_s">台積電</div>
 							<div class="project_section_category_l">TSMC</div>
@@ -21,56 +13,89 @@
 						<%=link_to '', asset_path('projects/p1_2.jpg'), style: 'display: none;', title: '描述2' %>
 						<%=link_to '', asset_path('projects/p1_3.jpg'), style: 'display: none;', title: '描述3' %>
 						<%=link_to '', asset_path('projects/p1_4.jpg'), style: 'display: none;', title: '描述4' %>
-					</div>   					                 		
-                </div>
-                <div class="col-sm-4 project_section_container_right">          	
-                    <div class="project_section_image_container">
-						<%=link_to asset_path('projects/p2.jpg'), class: 'zoom' do %>
-	                    <div class="project_section_image" style="background-image: url(<%=asset_path 'projects/p2.jpg'%>);">
-						<span class="overlay">
-							<div class="project_section_category_s">華映</div>
-							<div class="project_section_category_l">CPT</div>
-						</span>		
-						</div>   
-						<%end%>
-					</div>                   						                		
-                </div>                               
+						<%=link_to '', asset_path('projects/p1_5.jpg'), style: 'display: none;', title: '描述4' %>
+						<%=link_to '', asset_path('projects/p1_6.jpg'), style: 'display: none;', title: '描述4' %>
+						<%=link_to '', asset_path('projects/p1_7.jpg'), style: 'display: none;', title: '描述4' %>														
+		</div>   					                 		
+	</div>
+    <div class="col-sm-4 project_section_container_right">          	
+       <div class="project_section_image_container project_section_image_container_upper">
+			<%=link_to asset_path('projects/p2_cover.jpg'), class: 'zoom' do %>
+	        	<div class="project_section_image" style="background-image: url(<%=asset_path 'projects/p2_cover.jpg'%>);">
+					<span class="overlay">
+						<div class="project_section_category_s">華映</div>
+						<div class="project_section_category_l">CPT</div>
+					</span>		
+				</div>   
+			<%end%>
+			<%=link_to '', asset_path('projects/p2_1.jpg'), style: 'display: none;', title: '描述1' %>
+			<%=link_to '', asset_path('projects/p2_2.jpg'), style: 'display: none;', title: '描述2' %>
+			<%=link_to '', asset_path('projects/p2_3.jpg'), style: 'display: none;', title: '描述3' %>
+			<%=link_to '', asset_path('projects/p2_4.jpg'), style: 'display: none;', title: '描述4' %>
+			<%=link_to '', asset_path('projects/p2_5.jpg'), style: 'display: none;', title: '描述4' %>
+			<%=link_to '', asset_path('projects/p2_6.jpg'), style: 'display: none;', title: '描述4' %>
+			<%=link_to '', asset_path('projects/p2_7.jpg'), style: 'display: none;', title: '描述4' %>					
+		</div>                   						                		
+	</div>                               
 </div>	
 <div class="row text-center">
     	        <div class="col-sm-4 project_section_container_left">  	        	
-                    <div class="project_section_image_container">
-						<%=link_to asset_path('projects/p3.jpg'), class: 'zoom' do %>
-	                    <div class="project_section_image" style="background-image: url(<%=asset_path 'projects/p3.jpg'%>);">
+                    <div class="project_section_image_container project_section_image_container_lower">
+						<%=link_to asset_path('projects/p3_cover.jpg'), class: 'zoom' do %>
+	                    <div class="project_section_image" style="background-image: url(<%=asset_path 'projects/p3_cover.jpg'%>);">
 						<span class="overlay">
 							<div class="project_section_category_s">華亞</div>
 							<div class="project_section_category_l">inotera</div>
 						</span>		
 						</div>   
 						<%end%>
+						<%=link_to '', asset_path('projects/p2_1.jpg'), style: 'display: none;', title: '描述1' %>
+						<%=link_to '', asset_path('projects/p2_2.jpg'), style: 'display: none;', title: '描述2' %>
+						<%=link_to '', asset_path('projects/p2_3.jpg'), style: 'display: none;', title: '描述3' %>
+						<%=link_to '', asset_path('projects/p2_4.jpg'), style: 'display: none;', title: '描述4' %>
+						<%=link_to '', asset_path('projects/p2_5.jpg'), style: 'display: none;', title: '描述4' %>
+						<%=link_to '', asset_path('projects/p2_6.jpg'), style: 'display: none;', title: '描述4' %>
+						<%=link_to '', asset_path('projects/p2_7.jpg'), style: 'display: none;', title: '描述4' %>							
 					</div>      	        					                		
                 </div>  
     	        <div class="col-sm-4 project_section_container_middle">
-                    <div class="project_section_image_container">
-						<%=link_to asset_path('projects/p4.jpg'), class: 'zoom' do %>
-	                    <div class="project_section_image" style="background-image: url(<%=asset_path 'projects/p4.jpg'%>);">
+                    <div class="project_section_image_container project_section_image_container_lower">
+						<%=link_to asset_path('projects/p4_cover.jpg'), class: 'zoom' do %>
+	                    <div class="project_section_image" style="background-image: url(<%=asset_path 'projects/p4_cover.jpg'%>);">
 						<span class="overlay">
 							<div class="project_section_category_s">友達</div>
 							<div class="project_section_category_l">AUO</div>
 						</span>		
 						</div>   
 						<%end%>
+						<%=link_to '', asset_path('projects/p4_1.jpg'), style: 'display: none;', title: '描述1' %>
+						<%=link_to '', asset_path('projects/p4_2.jpg'), style: 'display: none;', title: '描述2' %>
+						<%=link_to '', asset_path('projects/p4_3.jpg'), style: 'display: none;', title: '描述3' %>
+						<%=link_to '', asset_path('projects/p4_4.jpg'), style: 'display: none;', title: '描述4' %>
+						<%=link_to '', asset_path('projects/p4_5.jpg'), style: 'display: none;', title: '描述4' %>
+						<%=link_to '', asset_path('projects/p4_6.jpg'), style: 'display: none;', title: '描述4' %>
+						<%=link_to '', asset_path('projects/p4_7.jpg'), style: 'display: none;', title: '描述4' %>
+						<%=link_to '', asset_path('projects/p4_8.jpg'), style: 'display: none;', title: '描述4' %>					
 					</div>   				                		
                 </div>  				
     	        <div class="col-sm-4 project_section_container_right">
-                    <div class="project_section_image_container">
-						<%=link_to asset_path('projects/p5.jpg'), class: 'zoom' do %>
-	                    <div class="project_section_image" style="background-image: url(<%=asset_path 'projects/p5.jpg'%>);">
+                    <div class="project_section_image_container project_section_image_container_lower">
+						<%=link_to asset_path('projects/p5_cover.jpg'), class: 'zoom' do %>
+	                    <div class="project_section_image" style="background-image: url(<%=asset_path 'projects/p5_cover.jpg'%>);">
 						<span class="overlay">
 							<div class="project_section_category_s">聯電</div>
 							<div class="project_section_category_l">UMC</div>
 						</span>		
 						</div>   
 						<%end%>
+						<%=link_to '', asset_path('projects/p5_1.jpg'), style: 'display: none;', title: '描述1' %>
+						<%=link_to '', asset_path('projects/p5_2.jpg'), style: 'display: none;', title: '描述2' %>
+						<%=link_to '', asset_path('projects/p5_3.jpg'), style: 'display: none;', title: '描述3' %>
+						<%=link_to '', asset_path('projects/p5_4.jpg'), style: 'display: none;', title: '描述4' %>
+						<%=link_to '', asset_path('projects/p5_5.jpg'), style: 'display: none;', title: '描述4' %>
+						<%=link_to '', asset_path('projects/p5_6.jpg'), style: 'display: none;', title: '描述4' %>
+						<%=link_to '', asset_path('projects/p5_7.jpg'), style: 'display: none;', title: '描述4' %>
+						<%=link_to '', asset_path('projects/p5_8.jpg'), style: 'display: none;', title: '描述4' %>						
 					</div>  				                		
                 </div>                 		
 </div>

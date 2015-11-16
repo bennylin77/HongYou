@@ -51,7 +51,7 @@ $(document).ready(function(){
 	new ScrollScene({triggerElement: ".index_organization_section"})
 				  .setTween(tween)
 				  .addTo(controller) 																
-							
+/*							
 	new ScrollScene({triggerElement: ".index_about_section"})
 								.setTween(TweenMax.from(".H_logo", 0.6, {left: "-200px", ease: Linear.easeNone}))
 								.addTo(controller);										
@@ -61,13 +61,28 @@ $(document).ready(function(){
 	new ScrollScene({triggerElement: ".index_about_section"})
 								.setTween(TweenMax.from(".Y_logo", 0.6, {right: "-20px", ease: Linear.easeNone}))
 								.addTo(controller);			
+*/							
+							
+	new ScrollScene({triggerElement: ".index_about_section"})
+								.setTween(TweenMax.from("#index_about_image_1", 1, {left: "200px", ease: Linear.easeNone}))
+								.addTo(controller);	
+	new ScrollScene({triggerElement: ".index_about_section"})
+								.setTween(TweenMax.from("#index_about_image_2", 1, {right: "200px", ease: Linear.easeNone}))
+								.addTo(controller);															
 								
+	
+											
 	tween = new TimelineLite();
-	tween.from('.project_section_image_container', 1, { scale: .9 });
-	//tween.timeScale(10) //play faster   
+	tween.to(".project_section_image_container_upper", 1, {autoAlpha: 1, ease: Linear.easeNone})
+		 .to(".project_section_image_container_lower", 1, {autoAlpha: 1, ease: Linear.easeNone})
+	tween.timeScale(1) //play faster   
 	new ScrollScene({triggerElement: ".index_project_section"})
 				  .setTween(tween)
-				  .addTo(controller) 									
+				  .addTo(controller) 											
+											
+											
+											
+											
 											
 	tween = new TimelineLite();
 	tween.to(".business_item_1", 1, {autoAlpha: 1, ease: Linear.easeNone})
