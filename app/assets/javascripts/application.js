@@ -19,5 +19,6 @@
 //= require modernizr.custom.min.js
 //= require parallax.js
 //= require TweenMax.min.js
+//= require magnific-popup
 
 //= require_tree .

@@ -74,7 +74,7 @@ body{
     margin: 0 auto;
     width: 370px;
     top: 0px;
-    visibility: hidden;   
+    //visibility: hidden;   
     position: relative;     
 }
 .top_1998_container h2.no-background {
@@ -107,7 +107,7 @@ body{
   margin: 0px auto;
   width: 50px;
   top: 0px;  
-  visibility: hidden;  
+  //visibility: hidden;  
 } 
 .arrow_down{
   width: 100%;
@@ -134,6 +134,17 @@ body{
   }
 }
 //===============================about============================//
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
+.index_about_image{
+  height: 400px; 
+  background-attachment: scroll;
+  background-position: center center;   
+  background-size: cover;    
+}
 .index_about_section{
   background: #ffffff;
   padding: 150px 0px;
@@ -248,25 +259,35 @@ body{
 .project_section_image{
   width: 100%;
   height: 350px;
-  //padding-bottom: 70% ; /* % of width, defines aspect ratio*/
-  //position: relative;
   margin: 0 auto;
   background-attachment: scroll; 
   background-position: center center;
   background-size: cover;  
 
-  transition: all 0.5s; 
-  -moz-transition: all 0.5s; 
-  -webkit-transition: all 0.5s; 
-  -o-transition: all 0.5s; 
+  transition: all 1s; 
+  -moz-transition: all 1s; 
+  -webkit-transition: all 1s; 
+  -o-transition: all 1s;  
 }
 .no-touch .project_section_image:hover{ 
-  transform: scale(1.2); 
-  -ms-transform: scale(1.2); 
-  -webkit-transform: scale(1.2); 
-  -o-transform: scale(1.2); 
-  -moz-transform: scale(1.2); 
+  transform: scale(1.1); 
+  -ms-transform: scale(1.1); 
+  -webkit-transform: scale(1.1); 
+  -o-transform: scale(1.1); 
+  -moz-transform: scale(1.1); 
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(56, 90, 173, 1);
+    opacity: .6; 
   }
+
+}
 
 .project_section_category{
     color: #ffffff;
@@ -276,9 +297,11 @@ body{
     font-weight: bold;
     border: 2px solid #ffffff;
 }
+/*
 .no-touch .project_section_category:hover{
     background: rgba(56, 90, 173, 0.8);
 }
+*/
 .project_section_category_s{
   font-size: 20px;  
   margin-top: 5px;
@@ -289,10 +312,10 @@ body{
 }
 .project_section_image span.overlay { 
     position: absolute; top: 0; right: 0; height: 100%; width: 100%; 
-    transition: opacity .25s ease-out;
-    -moz-transition: opacity .25s ease-out;
-    -webkit-transition: opacity .25s ease-out;
-    -o-transition: opacity .25s ease-out;
+    transition: opacity 1s ease-out;
+    -moz-transition: opacity 1s ease-out;
+    -webkit-transition: opacity 1s ease-out;
+    -o-transition: opacity 1s ease-out;
     display: block; 
     visibility: visible; 
 }     
@@ -319,29 +342,12 @@ body{
 
 
 
-.company_image_upper_container_outter{
-  width: 100%;
-  height: 0;
-  padding-bottom: 70% ; /* % of width, defines aspect ratio*/
-  position: relative;
-  margin: 0 auto;
-}
-.company_image_upper_container{
-  width: 100%;
-  height: 0;
-  padding-bottom: 70% ; /* % of width, defines aspect ratio*/
-  position: relative;
-  margin: 0 auto;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;  
-}
+/*
 .company_image_container_right{ padding-left: 0px; padding-right: 2px; }
 .company_image_container_left{ padding-right: 0px; padding-left: 2px; }
 .company_image_container_down_right{ padding-left: 0px; padding-right: 2.67px; }
 .company_image_container_down_center{ padding: 0px 1.33px;}
 .company_image_container_down_left{ padding-right: 0px; padding-left: 2.67px; }
-/*
 .mfp-with-zoom .mfp-container,
 .mfp-with-zoom.mfp-bg {
   opacity: 0;
@@ -362,12 +368,12 @@ body{
 .mfp-with-zoom.mfp-removing .mfp-container, 
 .mfp-with-zoom.mfp-removing.mfp-bg {
   opacity: 0;
-}*/
+}
 .company_image_container span.overlay { position: absolute; top: 0; right: 0; height: 100%; width: 100%; background-color: #000;
-    transition: opacity .25s ease-out;
-    -moz-transition: opacity .25s ease-out;
-    -webkit-transition: opacity .25s ease-out;
-    -o-transition: opacity .25s ease-out;
+    transition: opacity .5s ease-out;
+    -moz-transition: opacity .5s ease-out;
+    -webkit-transition: opacity .5s ease-out;
+    -o-transition: opacity .5s ease-out;
     display: block; visibility: visible; opacity: 0.55; -moz-opacity: 0.55; -webkit-opacity: 0.55; filter: alpha(opacity=65); -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=65)";    
 }     
 .company_image_container span.overlay i{ position: absolute; top: 40%; left: 0%; width: 100%; font-size: 1em; color: #fff !important; text-align: center;
@@ -377,16 +383,7 @@ body{
     filter: alpha(opacity=1);    
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=1)";
 }
-
-.company_image_container_outter, .company_image_upper_container_outter { overflow: hidden; }
-.company_image_container, .company_image_upper_container{ 
-    transition: all 0.5s; 
-    -moz-transition: all 0.5s; 
-    -webkit-transition: all 0.5s; 
-    -o-transition: all 0.5s; 
-}
-.no-touch .company_image_container:hover, .no-touch .company_image_upper_container:hover { transform: scale(1.2); -ms-transform: scale(1.2); -webkit-transform: scale(1.2); -o-transform: scale(1.2); -moz-transform: scale(1.2); }
-
+*/
 
 
 
@@ -411,35 +408,10 @@ body{
   padding-right: 0px; 
   margin-bottom: 16px;  
 }
-.project_section_image_bottom{
-  padding: 120px 0px;
-  width:100%;
-  background-attachment: scroll; 
-  background-position: center center;
-  background-size: cover;  
-}
 
 
 
 
-.index_fruits_category{
-    color: #ffffff;
-    width: 200px;  
-    padding: 10px 0px;  
-    margin: 0 auto;
-    font-weight: bold;
-    border: 2px solid #ffffff;
-}
-.no-touch .index_fruits_category:hover{
-    background: rgba(56, 90, 173, 0.8);
-}
-.index_fruits_category_s{
-  font-size: 20px;  
-  margin-bottom: 10px;
-}
-.index_fruits_category_l{
-  font-size: 33px;
-}
 
 
 
@@ -458,30 +430,125 @@ body{
 .index_business_section{
   padding: 150px 0px;  
   color: #ffffff;
-  font-weight: bold;
 }
 .business_item{
   visibility: hidden;
   font-size: 16px;
-  height: 37px;
-  line-height: 37px;
+  height: 32px;
+  line-height: 32px;
   letter-spacing: 1px;
   display: list-item;
-  margin-left: 1.3em;
+  //margin-left: 1.3em;
   list-style-type: circle;
+}
+.business_pic{
+  width: 530px; 
+}
+.parent-container{
 }
 .index_business_img_pop_div{
   -ms-transform: rotate(45deg); 
   -webkit-transform: rotate(45deg); 
   transform: rotate(45deg);     
   background: none; 
-  width: 140px; 
-  height: 140px;
+  width: 110px; 
+  height: 110px;
   position: absolute;  
 }
 .index_business_img_pop_div:hover{  
   background: rgba(255, 255, 255, 0.2); 
 }
+.index_business_img_pop_div_1{
+    top: 40px;
+    left: 55px;
+}
+.index_business_img_pop_div_2{
+    top: 40px;
+    left: 225px;
+}
+.index_business_img_pop_div_3{
+    top: 40px;
+    left: 395px;
+}
+.index_business_img_pop_div_4{
+    top: 210px;
+    left: 55px;
+}
+.index_business_img_pop_div_5{
+    top: 210px;
+    left: 225px;
+}
+.index_business_img_pop_div_6{
+    top: 210px;
+    left: 395px;
+}
+@media (max-width: 1150px) {
+  .business_pic{
+    width: 455px; 
+  }  
+  .index_business_img_pop_div{
+    width: 93px; 
+    height: 93px;
+  }  
+  .index_business_img_pop_div_1{
+    top: 34px;
+    left: 50px;
+  }
+  .index_business_img_pop_div_2{
+    top: 34px;
+    left: 196px;
+  }
+  .index_business_img_pop_div_3{
+    top: 34px;
+    left: 343px;
+  }
+  .index_business_img_pop_div_4{
+    top: 181px;
+    left: 50px;
+  }
+  .index_business_img_pop_div_5{
+    top: 181px;
+    left: 196px;
+  }
+  .index_business_img_pop_div_6{
+    top: 181px;
+    left: 343px;
+  } 
+}  
+@media (max-width: 992px) {
+  .business_pic{
+    width: 380px; 
+  }  
+  .index_business_img_pop_div{
+    width: 80px; 
+    height: 80px;
+  }  
+  .index_business_img_pop_div_1{
+    top: 27px;
+    left: 42px;
+  }
+  .index_business_img_pop_div_2{
+    top: 27px;
+    left: 165px;
+  }
+  .index_business_img_pop_div_3{
+    top: 27px;
+    left: 290px;
+  }
+  .index_business_img_pop_div_4{
+    top: 150px;
+    left: 42px;
+  }
+  .index_business_img_pop_div_5{
+    top: 150px;
+    left: 165px;
+  }
+  .index_business_img_pop_div_6{
+    top: 150px;
+    left: 290px;
+  }   
+  
+} 
 //===============================jobs============================//
 .index_jobs_section{
   padding: 80px 0px;  
@@ -603,19 +670,93 @@ body{
   letter-spacing: 1px;
   font-size: 18px;
   padding-bottom: 10px;
-  border-bottom: 1px solid #ffffff;
+  //border-bottom: 1px solid #ffffff;
   font-weight: normal;
 }
+.contact_branch_image_container {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.contact_branch_image_container_outter{
+  visibility: hidden;
+}
+/*
 .contact_branch_image_container img{
   height: 100px;
   border: 2px solid #ffffff;
   padding: 30px;
   border-radius: 100px;
 }
+*/
 .contact_branch_image_container .sub_title{
+  position: relative;
   letter-spacing: 1px;
-  margin-top: 10px;
+  top: 10px;
+  left: 20px;
 }
 .contact_branch_image_container .sub_content{
-  margin-top: 10px;  
+  position: relative;
+  width: 130px;
+  top: 20px;
+}
+
+.ih-item.circle {
+  width: 120px !important;
+  height: 120px !important;
+  margin: 0 auto !important;
+}
+.ih-item.circle.effect1 .spinner {
+  width: 130px !important;
+  height: 130px !important;
+  border-left-color: rgba(56, 90, 173, 1) !important;
+  border-top-color: rgba(56, 90, 173, 1) !important;
+  border-bottom-color: #ffffff !important;  
+  border-right-color: #ffffff !important;  
+}  
+.ih-item.circle.effect1 .info h3 {
+  font-size: 20px !important;
+  padding: 0px !important;
+  padding-top: 45px !important;
+}
+.ih-item .img img{
+  width: 35px !important;
+  left: auto !important;
+  right: auto !important;
+}
+
+
+.top_horizontal_map_line, .right_vertical_map_line, .left_vertical_map_line, .bottom_horizontal_map_line{
+  position: relative;
+  background: transparent;
+  width: 0px;
+  height: 0px;
+  background-color: #ffffff;
+  z-index: 1;
+}
+.top_horizontal_map_line, .right_vertical_map_line, .left_vertical_map_line, .bottom_horizontal_map_line{
+  position: absolute;
+}
+.left_vertical_map_line{
+  bottom: 0;
+  left: 0;
+  width: 1px;
+  //height: 100%;    
+}
+.top_horizontal_map_line{
+  top: 0;
+  left: 0;
+  width: 80%;
+  height: 1px;  
+}
+.bottom_horizontal_map_line{
+  bottom: 0;
+  right: 0;
+  width: 80%;
+  height: 1px;  
+}
+.right_vertical_map_line{
+  top: 0;
+  right: 0;
+  width: 1px;
+  height: 100%;  
 }

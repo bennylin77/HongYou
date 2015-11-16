@@ -25,52 +25,29 @@ $(document).ready(function(){
 									{top: '20px', repeat: -1, yoyo: true, ease: Circ.easeInOut}
 								))
 								.addTo(controller);	
-	/*						
-	date = new Date();							
-	new ScrollScene({triggerElement: ".index_top_container"})
-			.addTo(controller)
-			.on('start', function(e){
-				$('.since_year').each(function () {
-				  var $this = $(this);
-				  jQuery({ Counter: date.getFullYear()+1 }).animate({ Counter: $this.attr("data-year") }, {
-				    duration: 4000,
-				    easing: 'swing',
-				    step: function () {
-				      $this.text(Math.floor(this.Counter));
-				    },
-				  	complete: function() {
-				  		$this.html($this.attr("data-year"));
-				  	}		    
-				  });
-				});					
-			});		
-	*/
 	date = new Date();
 	$('.since_year').html(date.getFullYear())
 	var foo = { bar: date.getFullYear() };		
 	tween = new TimelineLite();
 	tween.to(".top_HY_container", 1, {autoAlpha: 1, ease: Linear.easeNone})
-		 .to(".top_1998_container", 1, {autoAlpha: 1, ease: Linear.easeNone})
-		 .from(".top_1998_container", 1, {top: "10px", ease: Linear.easeNone})	 
-		 .to(".top_arrow_container", 1, {autoAlpha: 1, ease: Linear.easeNone})
-		 .to(foo, 2, { bar: 1998, onUpdate: function() {
+		 //.to(".top_1998_container", 1, {autoAlpha: 1, ease: Linear.easeNone})
+		 //.from(".top_1998_container", 1, {top: "10px", ease: Linear.easeNone})	 
+		 //.to(".top_arrow_container", 1, {autoAlpha: 1, ease: Linear.easeNone})
+		 .to(foo, 2, { bar: 1988, onUpdate: function() {
 			  $('.since_year').html(Math.ceil(foo.bar));}, ease: Linear.easeNone})
 					 
-		 
+	//tween.timeScale(2)	 
 	new ScrollScene({triggerElement: ".index_top_container"})
 				  .setTween(tween)
 				  .addTo(controller) 			
-											
-							
+															
 	tween = new TimelineLite();
 	tween.fromTo(".vertical_ball_line", 1, {height:0, ease: Linear.easeNone}, {height:50, ease: Linear.easeNone})
 		 .fromTo(".horizontal_ball_line_1", 1, {width:0, ease: Linear.easeNone}, {width:'80%', ease: Linear.easeNone})	  	 
 		 .fromTo(".horizontal_ball_line_2", 1, {width:0, ease: Linear.easeNone}, {width:'80%', ease: Linear.easeNone})	  	 	  	 
 	  	 .fromTo(".ball_line", 1, {height:0, ease: Linear.easeNone}, {height:50, ease: Linear.easeNone})
 		 .to(".organization_balls", 1, {autoAlpha: 1, ease: Linear.easeNone})
-
-	
-	tween.timeScale(4) //play faster   
+	tween.timeScale(5) //play faster   
 	new ScrollScene({triggerElement: ".index_organization_section"})
 				  .setTween(tween)
 				  .addTo(controller) 																
@@ -83,9 +60,15 @@ $(document).ready(function(){
 								.addTo(controller);			
 	new ScrollScene({triggerElement: ".index_about_section"})
 								.setTween(TweenMax.from(".Y_logo", 0.6, {right: "-20px", ease: Linear.easeNone}))
-								.addTo(controller);	
-				
+								.addTo(controller);			
 								
+	tween = new TimelineLite();
+	tween.from('.project_section_image_container', 1, { scale: .9 });
+	//tween.timeScale(10) //play faster   
+	new ScrollScene({triggerElement: ".index_project_section"})
+				  .setTween(tween)
+				  .addTo(controller) 									
+											
 	tween = new TimelineLite();
 	tween.to(".business_item_1", 1, {autoAlpha: 1, ease: Linear.easeNone})
 		 .to(".business_item_2", 1, {autoAlpha: 1, ease: Linear.easeNone})
@@ -96,21 +79,31 @@ $(document).ready(function(){
 		 .to(".business_item_7", 1, {autoAlpha: 1, ease: Linear.easeNone})
 		 .to(".business_item_8", 1, {autoAlpha: 1, ease: Linear.easeNone})
 		 .to(".business_item_9", 1, {autoAlpha: 1, ease: Linear.easeNone})
-
-
-
-
-	
 	tween.timeScale(4) //play faster   
 	new ScrollScene({triggerElement: ".index_business_section"})
 				  .setTween(tween)
 				  .addTo(controller) 								
 								
-	/*							
-	new ScrollScene({triggerElement: ".index_bottom_section"})
-								.setTween(TweenMax.to(".index_bottom_container", 1, {autoAlpha: 1, ease: Linear.easeNone}))
-								.addTo(controller);	
-*/																															
+
+
+	tween = new TimelineLite();
+	//fromTo(".top_horizontal_map_line", 1, {height:0, ease: Linear.easeNone}, {height:50, ease: Linear.easeNone})
+	tween.fromTo(".top_horizontal_map_line", 1, {width:0, ease: Linear.easeNone}, {width:'100%', ease: Linear.easeNone})	  	 
+		 .fromTo(".right_vertical_map_line", 1, {height:0, ease: Linear.easeNone}, {height:300, ease: Linear.easeNone})
+		 .fromTo(".bottom_horizontal_map_line", 1, {width:0, ease: Linear.easeNone}, {width:'100%', ease: Linear.easeNone})	  	 		 
+		 .fromTo(".left_vertical_map_line", 1, {height:0, ease: Linear.easeNone}, {height: 300, ease: Linear.easeNone})	
+		 .to(".gmap_canvas_container", 1, {autoAlpha: 1, ease: Linear.easeNone})
+		 .to(".contact_branch_image_container_outter", 1, {autoAlpha: 1, ease: Linear.easeNone})
+	
+	tween.timeScale(2) //play faster   
+	new ScrollScene({triggerElement: ".index_contact_section"})
+				  .setTween(tween)
+				  .addTo(controller) 
+
+
+
+
+																														
 });
 $('.carousel').carousel({
   interval: 1000 * 6
@@ -145,6 +138,13 @@ function init_map_2(){
 		google.maps.event.addListener(marker, 'click', function(){});
 }
 google.maps.event.addDomListener(window, 'load', init_map_2);	
-
+//=================== maps ===================//
+    $('.parent-container').magnificPopup({
+        delegate: 'a', // the selector for gallery item
+        type: 'image',
+        gallery: {
+          enabled: true
+        },
+    });
 
 </script>	

@@ -1,6 +1,5 @@
-	<div class="row text-center" style="margin-top: 50px;">
-                <div class="col-sm-8 project_section_container_left">
-                    
+<div class="row text-center" style="margin-top: 50px;">
+                <div class="col-sm-8 project_section_container_left">                 
 <!--
 					<div class="company_image_upper_container_outter">
 						<%=link_to asset_path('projects/p1.jpg'), class: 'zoom' do %>
@@ -10,7 +9,7 @@
 					</div>                    
 -->                    
                     <div class="project_section_image_container">
-						<%=link_to asset_path('projects/p1.jpg'), class: 'zoom' do %>
+						<%=link_to asset_path('projects/p1.jpg'), class: 'zoom', title: '描述0' do %>
 	                    <div class="project_section_image" style="background-image: url(<%=asset_path 'projects/p1.jpg'%>);">
 						<span class="overlay">
 							<div class="project_section_category_s">台積電</div>
@@ -18,10 +17,13 @@
 						</span>		
 						</div>   
 						<%end%>
+						<%=link_to '', asset_path('projects/p1_1.jpg'), style: 'display: none;', title: '描述1' %>
+						<%=link_to '', asset_path('projects/p1_2.jpg'), style: 'display: none;', title: '描述2' %>
+						<%=link_to '', asset_path('projects/p1_3.jpg'), style: 'display: none;', title: '描述3' %>
+						<%=link_to '', asset_path('projects/p1_4.jpg'), style: 'display: none;', title: '描述4' %>
 					</div>   					                 		
                 </div>
-                <div class="col-sm-4 project_section_container_right">
-                	
+                <div class="col-sm-4 project_section_container_right">          	
                     <div class="project_section_image_container">
 						<%=link_to asset_path('projects/p2.jpg'), class: 'zoom' do %>
 	                    <div class="project_section_image" style="background-image: url(<%=asset_path 'projects/p2.jpg'%>);">
@@ -31,11 +33,10 @@
 						</span>		
 						</div>   
 						<%end%>
-					</div>   
-                 						                		
+					</div>                   						                		
                 </div>                               
-    	</div>	
-		<div class="row text-center">
+</div>	
+<div class="row text-center">
     	        <div class="col-sm-4 project_section_container_left">  	        	
                     <div class="project_section_image_container">
 						<%=link_to asset_path('projects/p3.jpg'), class: 'zoom' do %>
@@ -72,5 +73,31 @@
 						<%end%>
 					</div>  				                		
                 </div>                 		
-    	</div>
-   	
+</div>
+<script>
+$('.project_section_image_container').each(function() { // the containers for all your galleries
+    $(this).magnificPopup({
+        delegate: 'a', // the selector for gallery item
+        type: 'image',
+        gallery: {
+          enabled: true
+        },
+		mainClass: 'mfp-with-zoom', // this class is for CSS animation below
+	    /*zoom: {
+	    	enabled: true, // By default it's false, so don't forget to enable it
+	
+	    	duration: 300, // duration of the effect, in milliseconds
+	    	easing: 'ease-in-out', // CSS transition easing function 
+	
+	    // The "opener" function should return the element from which popup will be zoomed in
+	    // and to which popup will be scaled down
+	    // By defailt it looks for an image tag:
+	    	opener: function(openerElement) {
+	      // openerElement is the element on which popup was initialized, in this case its <a> tag
+	      // you don't need to add "opener" option if this code matches your needs, it's defailt one.
+	      	return openerElement.is('img') ? openerElement : openerElement.find('img');
+	    	}
+	  	}   */         
+    });
+});
+</script>   	
