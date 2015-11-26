@@ -30,26 +30,27 @@ if it's not present, don't show loader */
 .navbar-brand{
   padding-top: 10px !important; 
   color: #ffffff !important;
-  height: 60px !important;  
+  height: 54px !important;  
   letter-spacing: 3px;
 }
 .navbar-brand img{
-  height: 40px;
+  height: 34px;
 }
 .navbar-right li a{
   letter-spacing: 2px;
-  font-size: 16px;
+  font-size: 15px;
   color: #ffffff !important;
 }
 .navbar-right li a:hover, .navbar-right li a:active, .navbar-right li a:focus{
   background: rgba(45, 72, 139, 0.8) !important;
 }
 .navbar-right li a{
-  padding-top: 20px !important;
-  padding-bottom: 20px !important;
+  padding-top: 16px !important;
+  padding-bottom: 16px !important;
   letter-spacing: 2px;
-  font-size: 16px;
+  font-size: 15px;
   color: #ffffff !important;
+  
 }
 .navbar-right li.active a{
   background: rgba(45, 72, 139, 0.8) !important;
@@ -59,11 +60,11 @@ if it's not present, don't show loader */
 }
 .title_en{
   font-family: Arial Black;
-  font-size: 25px;
+  font-size: 20px;
   display: inline-block;
 }
 .title_ch{
-  font-size: 18px;  
+  font-size: 16px;  
   letter-spacing: 6px;
   display: inline-block;  
 }
@@ -82,21 +83,21 @@ if it's not present, don't show loader */
 }
 .index_top_container .top_HY_container{
     margin: 0 auto;
-    width: 370px;
+    width: 300px;
     margin-top: 35vh;
-    font-size: 46px;
-    line-height: 80px;
+    font-size: 33px;
+    line-height: 70px;
     letter-spacing: 5px;
-    border: 2px solid #ffffff;
+    border: 1px solid #ffffff;
     visibility: hidden;
 }
 .top_HY_container_ch{
     font-size: 18px;
-    line-height: 30px;  
+    line-height: 35px;  
 }
 .index_top_container .top_1998_container{
     margin: 0 auto;
-    width: 370px;
+    width: 300px;
     top: 0px;
     //visibility: hidden;   
     position: relative;     
@@ -173,11 +174,11 @@ if it's not present, don't show loader */
 }
 .index_about_section{
   background: #ffffff;
-  padding: 150px 0px;
+  padding: 100px 0px;
 }
 .index_about_content{
   color: #4E4C4C;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 30px;
 }
 .I_logo{
@@ -290,12 +291,32 @@ if it's not present, don't show loader */
   background-attachment: scroll; 
   background-position: center center;
   background-size: cover;  
-
   transition: all 1s; 
   -moz-transition: all 1s; 
   -webkit-transition: all 1s; 
-  -o-transition: all 1s;  
-  
+  -o-transition: all 1s;   
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    //background: rgba(33, 33, 33, 1);
+    //opacity: .4; 
+  }  
+}
+.project_section_image_large{
+  width: 100%;
+  height: 716px;
+  margin: 0 auto;
+  background-attachment: scroll; 
+  background-position: center center;
+  background-size: cover;  
+  transition: all 1s; 
+  -moz-transition: all 1s; 
+  -webkit-transition: all 1s; 
+  -o-transition: all 1s;   
   &:before {
     content: '';
     position: absolute;
@@ -307,19 +328,17 @@ if it's not present, don't show loader */
     opacity: .4; 
   }  
 }
-.no-touch .project_section_image:hover{ 
+.no-touch .project_section_image:hover, 
+.no-touch .project_section_image_large:hover{ 
   transform: scale(1.1); 
   -ms-transform: scale(1.1); 
   -webkit-transform: scale(1.1); 
   -o-transform: scale(1.1); 
   -moz-transform: scale(1.1); 
-
   &:before {
     background: none;
   }
-
 }
-
 .project_section_category{
     color: #ffffff;
     width: 200px;  
@@ -341,6 +360,7 @@ if it's not present, don't show loader */
   font-size: 33px;
   letter-spacing: 3px;
 }
+/*
 .project_section_image span.overlay { 
     position: absolute; top: 0; right: 0; height: 100%; width: 100%; 
     transition: opacity 1s ease-out;
@@ -356,8 +376,14 @@ if it's not present, don't show loader */
     -webkit-opacity: 1;
     filter: alpha(opacity=1);    
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=1)";
-}
+}*/
 .project_section_image span.overlay .project_section_category_s{
+  color: #ffffff;
+  font-size: 20px;  
+  position: absolute; top: 50%; left: 0%; width: 100%;
+  text-align: center;
+}
+.project_section_image_large span.overlay .project_section_category_s{
   color: #ffffff;
   font-size: 20px;  
   position: absolute; top: 50%; left: 0%; width: 100%;
@@ -369,7 +395,13 @@ if it's not present, don't show loader */
   position: absolute; top: 40%; left: 0%; width: 100%;
   text-align: center;
 }
-
+.project_section_image_large span.overlay .project_section_category_l{
+  color: #ffffff;
+  font-size: 25px;
+  position: absolute; top: 45%; left: 0%; width: 100%;
+  text-align: center;
+  border: 1px solid #ffffff;
+}
 
 
 
