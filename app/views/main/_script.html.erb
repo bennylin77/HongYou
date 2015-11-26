@@ -1,4 +1,11 @@
 <script>
+function show_popup(){
+	$(".se-pre-con").fadeOut("slow");
+};
+$(window).load(function() {
+	// Animate loader off screen
+	window.setTimeout( show_popup, 1 ); // 5 seconds
+});
 var controller;
 var tween;
 $(document).ready(function(){
@@ -153,6 +160,7 @@ function init_map_2(){
 		google.maps.event.addListener(marker, 'click', function(){});
 }
 google.maps.event.addDomListener(window, 'load', init_map_2);	
+
 //=================== maps ===================//
     $('.parent-container').magnificPopup({
         delegate: 'a', // the selector for gallery item
