@@ -82,6 +82,7 @@ $(document).ready(function(){
 	tween = new TimelineLite();
 	tween.to(".project_section_image_container_upper", 1, {autoAlpha: 1, ease: Linear.easeNone})
 		 .to(".project_section_image_container_lower", 1, {autoAlpha: 1, ease: Linear.easeNone})
+		 .to(".project_section_image_container_right", 1, {autoAlpha: 1, ease: Linear.easeNone})
 	tween.timeScale(1) //play faster   
 	new ScrollScene({triggerElement: ".index_project_section"})
 				  .setTween(tween)

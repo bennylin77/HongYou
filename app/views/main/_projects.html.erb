@@ -24,14 +24,7 @@
 							<div class="project_section_category_l">inotera</div>
 						</span>		
 						</div>   
-						<%end%>
-						<%=link_to '', asset_path('projects/p2_1.jpg'), style: 'display: none;', title: '描述1' %>
-						<%=link_to '', asset_path('projects/p2_2.jpg'), style: 'display: none;', title: '描述2' %>
-						<%=link_to '', asset_path('projects/p2_3.jpg'), style: 'display: none;', title: '描述3' %>
-						<%=link_to '', asset_path('projects/p2_4.jpg'), style: 'display: none;', title: '描述4' %>
-						<%=link_to '', asset_path('projects/p2_5.jpg'), style: 'display: none;', title: '描述4' %>
-						<%=link_to '', asset_path('projects/p2_6.jpg'), style: 'display: none;', title: '描述4' %>
-						<%=link_to '', asset_path('projects/p2_7.jpg'), style: 'display: none;', title: '描述4' %>							
+						<%end%>							
 					</div>      	        					                		
                 </div>  			
                 <div class="col-sm-6 project_section_container_middle">
@@ -49,7 +42,7 @@
 		</div>			                 		
 	</div>
     <div class="col-sm-4 project_section_container_right">          	
-       <div class="project_section_image_container project_section_image_container_upper">
+       <div class="project_section_image_container project_section_image_container_right">
 			<%=link_to asset_path('projects/project_cover.jpg'), class: 'zoom' do %>
 	        	<div class="project_section_image_large text-center" style="background-image: url(<%=asset_path 'projects/project_cover.jpg'%>); height: 716px;">
 					<span class="overlay">
@@ -57,18 +50,19 @@
 					</span>		
 				</div>   
 			<%end%>
-			<%=link_to '', asset_path('projects/p2_1.jpg'), style: 'display: none;', title: '描述1' %>
-			<%=link_to '', asset_path('projects/p2_2.jpg'), style: 'display: none;', title: '描述2' %>
-			<%=link_to '', asset_path('projects/p2_3.jpg'), style: 'display: none;', title: '描述3' %>
-			<%=link_to '', asset_path('projects/p2_4.jpg'), style: 'display: none;', title: '描述4' %>
-			<%=link_to '', asset_path('projects/p2_5.jpg'), style: 'display: none;', title: '描述4' %>
-			<%=link_to '', asset_path('projects/p2_6.jpg'), style: 'display: none;', title: '描述4' %>
-			<%=link_to '', asset_path('projects/p2_7.jpg'), style: 'display: none;', title: '描述4' %>					
+			<%=link_to '', asset_path('projects/p11.jpg'), style: 'display: none;', title: '描述1' %>
+			<%=link_to '', asset_path('projects/p12.jpg'), style: 'display: none;', title: '描述2' %>
+			<%=link_to '', asset_path('projects/p13.jpg'), style: 'display: none;', title: '描述3' %>
+			<%=link_to '', asset_path('projects/p14.jpg'), style: 'display: none;', title: '描述4' %>
+			<%=link_to '', asset_path('projects/p15.jpg'), style: 'display: none;', title: '描述4' %>
+			<%=link_to '', asset_path('projects/p16.jpg'), style: 'display: none;', title: '描述4' %>
+			<%=link_to '', asset_path('projects/p17.jpg'), style: 'display: none;', title: '描述4' %>					
+			<%=link_to '', asset_path('projects/p18.jpg'), style: 'display: none;', title: '描述4' %>							
 		</div>                   						                		
 	</div>                               
 </div>	
 <script>
-$('.project_section_image_container').each(function() { // the containers for all your galleries
+$('.index_project_section').each(function() { // the containers for all your galleries
     $(this).magnificPopup({
         delegate: 'a', // the selector for gallery item
         type: 'image',
