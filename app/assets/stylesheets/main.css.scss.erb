@@ -146,8 +146,11 @@ if it's not present, don't show loader */
       letter-spacing: 5px;
       border: 2px solid #ffffff;
   }
+   .top_HY_container_en{
+      font-size: 30px;
+  } 
   .top_HY_container_ch{
-      font-size: 18px;
+      font-size: 16px;
   }
   .index_top_container .top_1998_container{
       width: 280px;
@@ -511,7 +514,7 @@ if it's not present, don't show loader */
 .business_item{
   visibility: hidden;
   font-size: 15px;
-  height: 32px;
+  min-height: 32px;
   line-height: 32px;
   letter-spacing: 1px;
   display: list-item;
@@ -643,7 +646,7 @@ if it's not present, don't show loader */
 .carousel-inner .item {
     width: 100%; /*slider width*/
     font-size: 25px;
-    height: 550px;
+    height: 600px;
 }
 .carousel-content{
   /*
@@ -692,7 +695,7 @@ if it's not present, don't show loader */
   border-bottom: 1px solid #ffffff;   
   border-right: 1px solid #ffffff; 
   margin-top: 30px; 
-  height: 60px;  
+  min-height: 60px;  
 }
 #hexagon {
   width: 80px;
@@ -735,7 +738,8 @@ if it's not present, don't show loader */
   margin-top: 20px;
 }
 .jobs_content ul li{
-  margin-top: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
   width: 155px;
 }
 .jobs_content a{
@@ -757,10 +761,16 @@ if it's not present, don't show loader */
   width: 30%;
   line-height: 20px;  
 }
+.jobs_contact:hover{
+  background: rgba(56, 90, 173, 1); 
+}
 .jobs_contact a{
   color: #ffffff;
   letter-spacing: 2px;
   font-size: 13px;
+}
+.jobs_contact a:hover{
+  text-decoration: none;
 }
 .progress{
   height: 44.25px;
@@ -771,8 +781,22 @@ if it's not present, don't show loader */
     transition: none !important;
 }
 
-
-
+@media (max-width: 992px) {
+  .jobs_content ul li{
+    width: 150px;
+  }
+}
+@media (max-width: 480px) {
+  .jobs_content ul li{
+  }
+}
+.carousel-indicators li.active{
+  border-color: rgba(56, 90, 173, 0.8);
+  background: rgba(56, 90, 173, 0.8);
+}
+.carousel-indicators li{
+  border-color: rgba(56, 90, 173, 0.8);
+}
 .carousel-control {
     z-index: 10;
     top: 2%;

@@ -81,7 +81,7 @@
 		<div class="row">	
 			<div class="col-md-12">
 				<div class="title_container text-center">
-					<div class="title_en" style="width: 180px;">Organization</div>
+					<div class="title_en" style="width: 160px;">Organization</div>
 					<div class="title_ch">|組織架構</div>
 				</div>				
 			</div>
@@ -137,7 +137,7 @@
 		<div class="row">	
 			<div class="col-sm-12">
 				<div class="title_container text-left">
-					<div class="title_en" style="width: 120px; color: #3150a4;">Projects</div>
+					<div class="title_en" style="width: 100px; color: #3150a4;">Projects</div>
 					<div class="title_ch">|工程實績</div>
 				</div>				
 			</div>
@@ -151,7 +151,7 @@
 		<div class="row">	
 			<div class="col-md-12">
 				<div class="title_container text-left">				
-					<div class="title_en" style="width: 130px;">Business</div>
+					<div class="title_en" style="width: 110px;">Business</div>
 					<div class="title_ch">|營業項目</div>
 				</div>				
 			</div>
@@ -199,7 +199,7 @@
 		<div class="row">	
 			<div class="col-sm-12">
 				<div class="title_container text-left">
-					<div class="title_en" style="width: 70px; color: #3150a4;">Jobs</div>
+					<div class="title_en" style="width: 60px; color: #3150a4;">Jobs</div>
 					<div class="title_ch">|工作機會</div>
 				</div>				
 			</div>
@@ -217,17 +217,12 @@
 		<%end%>
       <%end%>
     </ol>
-
-
-
-
-    <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
 	  <%Job.all.each_with_index do |j, index |%> 
       <div class="item <%if index == 0 %>active<%end%>">
       	<div class="carousel-content">
-	      		<div class="col-sm-6">
-		      		<div style="background: rgba(45, 72, 139, 1); padding: 20px; padding-bottom: 40px;">
+	      		<div class="col-lg-6">
+		      		<div style="background: rgba(45, 72, 139, 1); padding: 20px; padding-bottom: 30px;">
 			      	<div class="jobs_main_title">
 			      		<%=j.title %>
 			      	
@@ -303,7 +298,7 @@
 				    </div>						
 				</div>
 			</div>	
-			<div class="col-sm-6 text-center">	
+			<div class="col-md-4 col-lg-6 text-center hidden-xs hidden-sm hidden-md">	
 				<%=image_tag 'jobs_opt.png', style: "height: 430px;" %>
 			</div>	
 			
@@ -315,17 +310,15 @@
 	  <%end%>
     </div>
 
-    <!-- Left and right controls -->
-    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+    <a class="left carousel-control hidden-xs" href="#myCarousel" role="button" data-slide="prev">
       <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
       <span class="sr-only">Previous</span>
     </a>
-    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+    <a class="right carousel-control hidden-xs" href="#myCarousel" role="button" data-slide="next">
       <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
       <span class="sr-only">Next</span>
     </a>
 </div>
-
 
 
 
@@ -338,7 +331,7 @@
 		<div class="row">	
 			<div class="col-md-12" style="padding: 0px;">
 				<div class="title_container text-left">				
-					<div class="title_en" style="width: 150px;">Contact us</div>
+					<div class="title_en" style="width: 130px;">Contact us</div>
 					<div class="title_ch">|聯絡我們</div>
 				</div>				
 			</div>
