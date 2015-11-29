@@ -128,6 +128,17 @@ $(document).ready(function(){
 
 																														
 });
+//=================== jobs ===================//
+$('.jobs_contact').hover(function() {
+	$(".progress-bar").animate({
+	    width: "100%"
+	}, 2000);
+}, function() {
+	$(".progress-bar").animate({
+	    width: "0%"
+	}, 2000);
+});
+
 $('.carousel').carousel({
   interval: 1000 * 6
 });

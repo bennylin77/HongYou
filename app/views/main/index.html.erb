@@ -203,20 +203,13 @@
 	<div class="container">
 		<div class="row">	
 			<div class="col-sm-12">
-				<div class="title_container text-center">
+				<div class="title_container text-left">
 					<div class="title_en" style="width: 70px; color: #3150a4;">Jobs</div>
 					<div class="title_ch">|工作機會</div>
 				</div>				
 			</div>
 		</div>
-	</div>	
-	<div class="container">
-		<div class="row">	
-			<div class="col-sm-12">
-				<div style="margin-top: 35px;">
-
-
-
+		<div class="row" style="margin-top: 30px;">	
 
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
@@ -230,70 +223,101 @@
       <%end%>
     </ol>
 
+
+
+
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
 	  <%Job.all.each_with_index do |j, index |%> 
       <div class="item <%if index == 0 %>active<%end%>">
       	<div class="carousel-content">
-	      	<div class="jobs_main_title"><%=j.title %></div>
-	      	<div class="jobs_title_container"><span class="jobs_title_ch">職務內容</span><span class="jobs_title_en">content</span></div>	
-	      	<div class="jobs_content"><%=j.content %></div>
-	      	<!--<div class="jobs_title_container"><span class="jobs_title_ch">工作地點</span><span class="jobs_title_en">location</span></div>		      	
-	      	<div class="jobs_content"><%=j.location %></div>
-	      	<div class="jobs_title_container"><span class="jobs_title_ch">工作性質</span><span class="jobs_title_en">kind</span></div>		      	
-	      	<div class="jobs_content"><%if j.part_time_c%>兼職<%else%>正職<%end%></div>
-	      	<div class="jobs_title_container"><span class="jobs_title_ch">需求人數</span><span class="jobs_title_en">quantity</span></div>		      	
-	      	<div class="jobs_content"><%=j.quantity %></div>-->
-			<div class="jobs_title_container"><span class="jobs_title_ch">描述</span><span class="jobs_title_en">description</span></div>		      	
-	      	<div class="jobs_content">		
-				<table class="table">
-				    <thead>
-				      <tr>
-				        <th class="text-center">地點</th>
-				        <th class="text-center">性質</th>
-				        <th class="text-center">需求人數</th>
-				      </tr>
-				    </thead>
-				    <tbody class="text-center">
-				      <tr>
-				        <td><%=j.location %></td>
-				        <td><%if j.part_time_c%>兼職<%else%>正職<%end%></td>
-				        <td><%=j.quantity %></td>
-				      </tr>
-				    </tbody>
-				  </table>				
-	      	</div>	      	
-	      	<div class="jobs_title_container"><span class="jobs_title_ch">具備要求</span><span class="jobs_title_en">requirement</span></div>		      	
-	      	<div class="jobs_content">		
-				<table class="table">
-				    <thead>
-				      <tr>
-				        <th class="text-center">工作經歷</th>
-				        <th class="text-center">學歷</th>
-				        <th class="text-center">科系</th>
-				      </tr>
-				    </thead>
-				    <tbody class="text-center">
-				      <tr>
-				        <td><%=j.experience %></td>
-				        <td><%=j.education %></td>
-				        <td><%=j.major %></td>
-				      </tr>
-				    </tbody>
-				  </table>				
-	      	</div>	 
-	      	<div class="jobs_title_container"><span class="jobs_title_ch">備註</span><span class="jobs_title_en">notes</span></div>			      	     	
-        	<div class="jobs_content"><%if j.note.blank?%>--<%else%><%=j.note%><%end%></div>
-        	<div class="jobs_content" style="border-bottom: 1px solid rgba(45, 72, 139, 0.8); ">
-        		<a href="tel:03-6662578" class="btn">
-					聯絡人資
-				</a>
-			</div>
+	      		<div class="col-sm-6">
+		      		<div style="background: rgba(45, 72, 139, 1); padding: 20px; padding-bottom: 40px;">
+			      	<div class="jobs_main_title">
+			      		<%=j.title %>
+			      	
+			      	</div>	      	
+			
+			      	<div class="jobs_content">
+					  <div class="demo" style="position: absolute; top: -15px; left: 10px">
+					    <div class="hexa text-center" id="hexagon"></div>
+					    <div class="hex-over"><div class="jobs_title_ch">職務內容</div><div class="jobs_title_en">content</div></div>
+					  </div>		      	
+			      	  <div style="margin-top: 30px;"><%=j.content %></div>
+			      	</div>      	
+			      	<div class="jobs_content">	
+					  <div class="demo" style="position: absolute; top: -15px; left: 10px">
+					    <div class="hexa text-center" id="hexagon"></div>
+					    <div class="hex-over"><div class="jobs_title_ch">描述</div><div class="jobs_title_en">description</div></div>
+					  </div>		      			
+						<ul class="list-inline">
+						    <li>
+						    	<span style="border-left: 3px solid #ffffff; padding-left: 6px;">地點：</span>
+						        <span><%=j.location %></span>
+						    </li>
+						    <li>    
+						        <span style="border-left: 3px solid #ffffff; padding-left: 6px;">性質：</span>
+						        <span><%if j.part_time_c%>兼職<%else%>正職<%end%></span>
+						    </li>    
+						    <li>
+						        <span style="border-left: 3px solid #ffffff; padding-left: 6px;">需求人數：</span>
+						        <span><%=j.quantity %></span>
+						      </tr>
+						    </li>
+						</ul>				  			
+			      	</div>	
+			      	<div class="jobs_content">		    		
+					  <div class="demo" style="position: absolute; top: -15px; left: 10px">
+					    <div class="hexa text-center" id="hexagon"></div>
+					    <div class="hex-over"><div class="jobs_title_ch">具備要求</div><div class="jobs_title_en">requirement</div></div>
+					  </div>
+						<ul class="list-inline">
+						    <li>
+						    	<span style="border-left: 3px solid #ffffff; padding-left: 6px;">工作經歷：</span>
+						        <span><%=j.experience %></span>
+						    </li>
+						    <li>    
+						        <span style="border-left: 3px solid #ffffff; padding-left: 6px;">學歷：</span>
+						        <span><%=j.education %></span>
+						    </li>    
+						    <li>
+						        <span style="border-left: 3px solid #ffffff; padding-left: 6px;">科系：</span>
+						        <span><%=j.major %></span>
+						      </tr>
+						    </li>
+						</ul>			
+			      	</div>	
+		        	<div class="jobs_content">
+					  <div class="demo" style="position: absolute; top: -15px; left: 10px">
+					    <div class="hexa text-center" id="hexagon"></div>
+					    <div class="hex-over"><div class="jobs_title_ch">備註</div><div class="jobs_title_en">note</div></div>
+					  </div>        		
+		        		<div style="margin-top: 30px;">	
+		        		<%if j.note.blank?%>--<%else%><%=j.note%><%end%>
+		        		</div>
+		        	</div>
+				</div>	
+				<div>
+					<div class="text-center pull-left jobs_contact">
+		        		<a href="tel:03-6662578" class="">
+							聯絡人資
+						</a>
+					</div>		
+				    <div class="progress progress-striped active">
+				        <div class="progress-bar progress-bar-primary" style="width:0%"></div>
+				    </div>						
+				</div>
+			</div>	
+			<div class="col-sm-6 text-center">	
+				<%=image_tag 'jobs_opt.png', style: "height: 430px;" %>
+			</div>	
+			
+			
+			
+			
         </div>      	
       </div>
 	  <%end%>
-
-  
     </div>
 
     <!-- Left and right controls -->
@@ -310,18 +334,6 @@
 
 
 
-
-
-
-				</div>			
-			</div>
-			<!--
-			<div class="col-md-1">
-				<div style="margin-top: 35px;">
-					<%= image_tag 'I.png', class: 'I_logo hidden-sm hidden-xs hidden-md' %>
-					<%= image_tag 'Y.png', class: 'Y_logo hidden-sm hidden-xs hidden-md' %>
-				</div>			
-			</div>		-->	
 		</div>		
 	</div>
 </section>

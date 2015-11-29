@@ -495,7 +495,7 @@ if it's not present, don't show loader */
 }
 .business_item{
   visibility: hidden;
-  font-size: 16px;
+  font-size: 15px;
   height: 32px;
   line-height: 32px;
   letter-spacing: 1px;
@@ -627,25 +627,27 @@ if it's not present, don't show loader */
 
 .carousel-inner .item {
     width: 100%; /*slider width*/
-    font-size: 30px;
-    height: 720px;
+    font-size: 25px;
+    height: 550px;
 }
 .carousel-content{
+  /*
   position: absolute;
   left: 20%;
-  right: 20%;
+  right: 20%;*/
 }
 .jobs_main_title{
   font-size: 70%;
   letter-spacing: 4px;
-  text-align: center;
+  text-align: left;
   margin: 0px auto;
-  height: 80px;
-  line-height: 80px;
+  height: 40px;
+  line-height: 40px;
   width: 100%; 
-  background: rgba(45, 72, 139, 0.8);   
+  border-bottom: 1px solid #ffffff;
 }
 .jobs_title_container{
+  border-radius: 10px; 
   font-size: 50%;
   text-align: center;
   margin: 0px auto;
@@ -654,38 +656,76 @@ if it's not present, don't show loader */
   width: 100%; 
   color: rgba(45, 72, 139, 0.8);  
   background: rgba(220, 220, 220, 0.17); 
-  border-bottom: 1px solid rgba(220, 220, 220, 1); 
-  border-left: 1px solid rgba(45, 72, 139, 0.8); 
-  border-right: 1px solid rgba(45, 72, 139, 0.8);   
-  border-top: none;   
+  border: 1px solid #ffffff;      
 }
 .jobs_title_ch{
-  
+  font-size: 12px;  
+  line-height: 12px;
 }
 .jobs_title_en{
-  margin-left: 5px;
+  font-size: 12px;
+  line-height: 12px;
 }
 .jobs_content{
-  font-size: 50%;  
-  text-align: center;
-  margin: 0px auto;
-  min-height: 40px;
-  line-height: 40px;
+  position: relative;
+  font-size: 13px;  
   width: 100%;
-  color: #333;     
+  color: #ffffff;     
   background: rgba(255, 255, 255, 0);  
-  border-bottom: 1px solid rgba(220, 220, 220, 1); 
-  border-left: 1px solid rgba(45, 72, 139, 0.8); 
-  border-right: 1px solid rgba(45, 72, 139, 0.8); 
-  border-top: none; 
-   
+  border-left: none;
+  border-top: 1px solid #ffffff;    
+  border-bottom: 1px solid #ffffff;   
+  border-right: 1px solid #ffffff; 
+  margin-top: 30px; 
+  height: 60px;  
 }
-.jobs_content th{
-  color: rgba(45, 72, 139, 0.8);     
+#hexagon {
+  width: 80px;
+  height: 30px;
+  background: #ffffff;
+  position: relative;
+    z-index:1;
+    margin:0 auto;
+}
+#hexagon:before {
+  content: "";
+  left:-80px;
+  display:block;
+    position: relative;
+    border-right: 10px solid #ffffff;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+}
+#hexagon:after {
+  content: "";
+    right:-80px;
+    top:-30px;
+    position: relative;
+    display:block;
+  border-left: 10px solid #ffffff;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+}
+.hex-over {
+  color: rgba(45, 72, 139, 1);
+  z-index:5;
+  position:relative;
+  width:100%;
+  top:-25px;
+  text-align:center;
+  padding:0px 0px 1px 0px;
+}
+.jobs_content ul{
+  margin: 0px;
+  margin-top: 20px;
+}
+.jobs_content ul li{
+  margin-top: 10px;
+  width: 155px;
 }
 .jobs_content a{
   color: #ffffff;
-  background: rgba(45, 72, 139, 0.8);
+  background: rgba(45, 72, 139, 1);
   padding: 10px 40px;
   margin: 20px auto;
 }
@@ -693,6 +733,31 @@ if it's not present, don't show loader */
   color: #ffffff;
   background: rgba(45, 72, 139, 1);
 }
+
+.jobs_contact{
+  border-bottom-left-radius: 20px;
+  border: 10px solid rgba(45, 72, 139, 1);
+  color: #ffffff;
+  background: rgba(56, 90, 173, 0.8);
+  width: 30%;
+  line-height: 20px;  
+}
+.jobs_contact a{
+  color: #ffffff;
+  letter-spacing: 2px;
+  font-size: 13px;
+}
+.progress{
+  height: 44.25px;
+  border-radius: 0px !important;
+}
+.progress.active .progress-bar {
+    -webkit-transition: none !important;
+    transition: none !important;
+}
+
+
+
 .carousel-control {
     z-index: 10;
     top: 2%;
@@ -702,15 +767,18 @@ if it's not present, don't show loader */
     color: #333;
 }
 .carousel-control.left,
-.carousel-control.right { background: none }
+.carousel-control.right { background: none; }
+.carousel-control.left span,
+.carousel-control.right span{ font-size: 15px !important; color: rgba(45, 72, 139, 1)}
+
 .carousel-control.left:hover,
 .carousel-control.right:hover,
 .carousel-control.left:focus,
 .carousel-control.right:focus
  { color: #333;}
 // change it according to your needs
-.carousel-control.left { left: -10px; }
-.carousel-control.right { right: -10px; }
+.carousel-control.left { left: -20px; }
+.carousel-control.right { right: -20px; }
 
 
 
