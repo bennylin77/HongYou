@@ -753,6 +753,9 @@ if it's not present, don't show loader */
   background: rgba(45, 72, 139, 1);
 }
 
+
+
+
 .jobs_contact{
   border-bottom-left-radius: 20px;
   border: 10px solid rgba(45, 72, 139, 1);
@@ -772,8 +775,56 @@ if it's not present, don't show loader */
 .jobs_contact a:hover{
   text-decoration: none;
 }
+
+
+
+
+
+.bvc {}
+.bevel, .content { border-width: 15px; border-left-width: 20px; border-right-width: 20px; }
+.bevel, .content { border-color: rgba(45, 72, 139, 1); border-style:solid; }
+
+.bvc {
+    width: 30%; /* width of overall box, variable or fixed */ 
+    //margin: 0 auto;
+    position: relative;
+    //margin-bottom: 15px;
+}
+
+.bvc .tr, .bvc .tl, .bvc .br, .bvc .bl { height: 0px; width: 100%; }
+.bvc .tr, .bvc .tl { border-top: 0; }
+.bvc .br, .bvc .bl { border-bottom: 0; }
+.bvc .tr, .bvc .br { border-right-color: transparent; }
+.bvc .tl, .bvc .bl { border-left-color: transparent; }
+.no_bevel { height: 0px; width: 100%; border-bottom: 0; }
+
+.content {
+    height: 20px;
+    width: 100%;
+    border-top: 0;
+    border-bottom: 0;
+    color: #ffffff;
+    background: rgba(56, 90, 173, 0.8);
+    line-height: 20px; 
+    font-size: 13px; 
+    text-align: center;   
+}
+.content:hover{
+  background: rgba(56, 90, 173, 1); 
+}
+.content  a{
+  color: #ffffff;
+  letter-spacing: 2px;
+  font-size: 13px;
+}
+.content a:hover{
+  text-decoration: none;
+}
+
+
+
 .progress{
-  height: 44.25px;
+  height: 50px;
   border-radius: 0px !important;
 }
 .progress.active .progress-bar {
