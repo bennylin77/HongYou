@@ -6,7 +6,7 @@ class AdminController < ApplicationController
          session[:sign_in]='hongyou29157199'
          #uri=session[:original_uri]
          #session[:original_uri]=nil
-         redirect_to news_index_path
+         redirect_to jobs_path
        else
          flash.now[:title]="登入"         
          flash.now[:notice]="錯誤的帳號或密碼"
