@@ -1,23 +1,28 @@
-<h1>Listing jobs</h1>
-
-<table>
-  <thead>
+<div style="min-height: 1500px;" class="container">
+<br><br><br><br><br><br>
+<div class="btn-group" role="group" aria-label="...">
+  <%= link_to '工作機會', jobs_path, class: 'btn btn-default'  %>	
+</div>
+<br><br>
+<h1>工作機會列表</h1>
+<table class="table table-striped">
     <tr>
+      <th>職位名稱</th>
+      <th>職務內容</th>
       <th colspan="3"></th>
     </tr>
-  </thead>
-
-  <tbody>
     <% @jobs.each do |job| %>
       <tr>
-        <td><%= link_to 'Show', job %></td>
-        <td><%= link_to 'Edit', edit_job_path(job) %></td>
-        <td><%= link_to 'Destroy', job, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= job.title %></td>
+        <td><%= job.content %></td>
+        <td>
+        <%= link_to '詳細', job, class: 'btn btn-default' %>
+        <%= link_to '編輯', edit_job_path(job), class: 'btn btn-default' %>
+        <%= link_to '刪除', job, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
+        </td>
       </tr>
     <% end %>
-  </tbody>
 </table>
 
-<br>
-
-<%= link_to 'New Job', new_job_path %>
+<%= link_to '新增工作', new_job_path, class: 'btn btn-info'  %>
+</div>

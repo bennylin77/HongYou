@@ -16,5 +16,14 @@
 <%=render "layouts/menu" %>
 <%= yield %>
 <%=render "layouts/footer" %>
+<script>
+function show_popup(){
+	$(".se-pre-con").fadeOut("slow");
+};
+$(window).load(function() {
+	// Animate loader off screen
+	window.setTimeout( show_popup, 1 ); // 5 seconds
+});	
+</script>
 </body>
 </html>

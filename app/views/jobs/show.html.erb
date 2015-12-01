@@ -1,4 +1,17 @@
+<div style="height: 3000px" class="container">
+<br><br><br><br><br><br><br><br>
 <p id="notice"><%= notice %></p>
 
-<%= link_to 'Edit', edit_job_path(@job) %> |
-<%= link_to 'Back', jobs_path %>
+<p>
+  <strong>職位名稱:</strong>
+  <%= @job.title %>
+</p>
+
+<p>
+  <strong>職務內容:</strong>
+  <%= @job.content %>
+</p>
+
+<%= link_to '編輯工作', edit_job_path(@job), class: 'btn btn-default' %> |
+<%= link_to '回上一頁', jobs_path, class: 'btn btn-default' %>
+</div>

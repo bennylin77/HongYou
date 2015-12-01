@@ -193,6 +193,7 @@
 		</div>		
 	</div>
 </section>
+<%if Job.all.count != 0%>
 <div id="section_jobs"></div>
 <section class="index_jobs_section" id="index_jobs_section">
 	<div class="container">
@@ -332,6 +333,7 @@
 		</div>		
 	</div>
 </section>
+<%end%>
 <div id="section_contact"></div>
 <section class="index_contact_section" id="index_contact_section" data-parallax="scroll" data-image-src="<%= image_url 'contact_bg.jpg' %>">
 	<div class="container">

@@ -1,5 +1,13 @@
-<h1>New job</h1>
-
+<div class="container">
+<div class="row">
+	<div class="col-sm-offset-2 col-sm-10">
+		<h1>新增工作</h1>
+	</div>
+</div>
 <%= render 'form' %>
-
-<%= link_to 'Back', jobs_path %>
+<div class="row">
+	<div class="col-sm-offset-2 col-sm-10">
+	<%= link_to '回上一頁', jobs_path, class: 'btn btn-default' %>
+	</div>
+</div>
+</div>
