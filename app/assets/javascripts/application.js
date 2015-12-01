@@ -12,13 +12,11 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
+//= require jquery.turbolinks
 //= require bootstrap-sprockets
-//= require jquery.scrollmagic.debug.js
-//= require jquery.scrollmagic.js
-//= require modernizr.custom.min.js
-//= require parallax.js
 //= require TweenMax.min.js
+//= require modernizr.custom.min.js
+//= require jquery.scrollmagic.js
+//= require jquery.scrollmagic.debug.js
 //= require magnific-popup
-
 //= require_tree .
