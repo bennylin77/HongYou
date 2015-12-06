@@ -19,6 +19,17 @@
 <script>
 function show_popup(){
 	$(".se-pre-con").fadeOut("slow");
+	date = new Date();
+	$('.since_year').html(date.getFullYear())
+	var foo = { bar: date.getFullYear() };		
+	tween = new TimelineLite();
+	tween.to(".top_HY_container", 1, {autoAlpha: 1, ease: Linear.easeNone})
+		 //.to(".top_1998_container", 1, {autoAlpha: 1, ease: Linear.easeNone})
+		 //.from(".top_1998_container", 1, {top: "10px", ease: Linear.easeNone})	 
+		 //.to(".top_arrow_container", 1, {autoAlpha: 1, ease: Linear.easeNone})
+		 .to(foo, 2, { bar: 1988, onUpdate: function() {
+			  $('.since_year').html(Math.ceil(foo.bar));}, ease: Linear.easeNone})
+					
 };
 $(window).load(function() {
 	// Animate loader off screen

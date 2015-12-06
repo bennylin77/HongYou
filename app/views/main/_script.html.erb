@@ -30,21 +30,11 @@ $(document).ready(function(){
 									{top: '20px', repeat: -1, yoyo: true, ease: Circ.easeInOut}
 								))
 								.addTo(controller);	
-	date = new Date();
-	$('.since_year').html(date.getFullYear())
-	var foo = { bar: date.getFullYear() };		
-	tween = new TimelineLite();
-	tween.to(".top_HY_container", 1, {autoAlpha: 1, ease: Linear.easeNone})
-		 //.to(".top_1998_container", 1, {autoAlpha: 1, ease: Linear.easeNone})
-		 //.from(".top_1998_container", 1, {top: "10px", ease: Linear.easeNone})	 
-		 //.to(".top_arrow_container", 1, {autoAlpha: 1, ease: Linear.easeNone})
-		 .to(foo, 2, { bar: 1988, onUpdate: function() {
-			  $('.since_year').html(Math.ceil(foo.bar));}, ease: Linear.easeNone})
-					 
+	 
 	//tween.timeScale(2)	 
-	new ScrollScene({triggerElement: ".index_top_container"})
-				  .setTween(tween)
-				  .addTo(controller) 
+	//new ScrollScene({triggerElement: ".index_top_container"})
+	//			  .setTween(tween)
+	//			  .addTo(controller) 
 	tween = new TimelineLite();				  			
 	if(mobilecheck()){
 		tween.fromTo(".ball_line", 1, {height:0, ease: Linear.easeNone}, {height:50, ease: Linear.easeNone})
