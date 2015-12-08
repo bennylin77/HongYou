@@ -156,12 +156,12 @@ function init_map_2(){
 	var myOptions = {
 		styles: styles,
 		zoom:15,
-		center: new google.maps.LatLng(24.783931630358797,120.98946392824179),
+		center: new google.maps.LatLng(24.7787822,120.98609320000003),
 		mapTypeId: google.maps.MapTypeId.ROADMAP
 		};
 		map = new google.maps.Map(document.getElementById('gmap_canvas_2'), myOptions);
-		marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(24.783931630358797,120.98946392824179)});
-		infowindow = new google.maps.InfoWindow({content:'<strong>鴻祐新竹公司</strong><br>新竹市高翠路73巷1號<br> 新竹市<br>'});
+		marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(24.7787822,120.98609320000003)});
+		infowindow = new google.maps.InfoWindow({content:'<strong>鴻祐新竹公司</strong><br>東區高翠路221巷2弄19號<br> 新竹市<br>'});
 		google.maps.event.addListener(marker, 'click', function(){});
 }
 google.maps.event.addDomListener(window, 'load', init_map_2);	
