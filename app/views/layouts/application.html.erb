@@ -11,11 +11,13 @@
   <%= csrf_meta_tags %>
 </head>
 <body data-spy="scroll" data-target=".menu" data-offset="10">
+<div id="content">
 <div class="se-pre-con"></div>
 <script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script>
 <%=render "layouts/menu" %>
 <%= yield %>
 <%=render "layouts/footer" %>
+</div>
 <script>
 function show_popup(){
 	$(".se-pre-con").fadeOut("slow");
@@ -30,6 +32,7 @@ function show_popup(){
 		 .to(foo, 2, { bar: 1988, onUpdate: function() {
 			  $('.since_year').html(Math.ceil(foo.bar));}, ease: Linear.easeNone})
 					
+	$('body').css('overflowY', 'auto'); 
 };
 $(window).load(function() {
 	// Animate loader off screen

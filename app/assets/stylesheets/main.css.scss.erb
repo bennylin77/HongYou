@@ -1,5 +1,7 @@
 body{
   background: #ffffff;
+  //overflow-x:hidden;
+  overflow:hidden;
 }
 /* This only works with JavaScript, 
 if it's not present, don't show loader */
@@ -12,8 +14,8 @@ if it's not present, don't show loader */
   width: 100%;
   height: 100%;
   z-index: 9999;
-  background: url( asset_path('logo.gif') ) center no-repeat #fff;
-  background-size: 60px 60px;
+  background: url( <%=asset_path('logo.gif?' + Time.now.to_i.to_s)%> ) center no-repeat rgba(45, 72, 139, 0.9);
+  background-size: 130px 130px;
 }
 
 /*============================ preloader ===================================*/
@@ -86,13 +88,13 @@ if it's not present, don't show loader */
     width: 300px;
     margin-top: 35vh;
     font-size: 33px;
-    line-height: 70px;
+    line-height: 68px;
     letter-spacing: 5px;
     border: 1px solid #ffffff;
     visibility: hidden;
 }
 .top_HY_container_ch{
-    font-size: 18px;
+    font-size: 22px;
     line-height: 35px;  
 }
 .index_top_container .top_1998_container{
@@ -142,7 +144,7 @@ if it's not present, don't show loader */
       width: 280px;
       margin-top: 30vh;
       font-size: 38px;
-      line-height: 70px;
+      line-height: 68px;
       letter-spacing: 5px;
       border: 2px solid #ffffff;
   }
@@ -150,7 +152,7 @@ if it's not present, don't show loader */
       font-size: 30px;
   } 
   .top_HY_container_ch{
-      font-size: 16px;
+      font-size: 21px;
   }
   .index_top_container .top_1998_container{
       width: 280px;
@@ -513,16 +515,16 @@ if it's not present, don't show loader */
 }
 .business_item{
   visibility: hidden;
-  font-size: 15px;
-  min-height: 32px;
-  line-height: 32px;
+  font-size: 17px;
+  min-height: 40px;
+  line-height: 40px;
   letter-spacing: 1px;
   display: list-item;
   margin-left: 1.3em;
   list-style-type: circle;
 }
 .business_pic{
-  width: 530px; 
+  width: 520px; 
 }
 .parent-container{
 }
@@ -544,11 +546,11 @@ if it's not present, don't show loader */
 }
 .index_business_img_pop_div_2{
     top: 40px;
-    left: 225px;
+    left: 221px;
 }
 .index_business_img_pop_div_3{
     top: 40px;
-    left: 395px;
+    left: 388px;
 }
 .index_business_img_pop_div_4{
     top: 210px;
@@ -556,13 +558,18 @@ if it's not present, don't show loader */
 }
 .index_business_img_pop_div_5{
     top: 210px;
-    left: 225px;
+    left: 221px;
 }
 .index_business_img_pop_div_6{
     top: 210px;
-    left: 395px;
+    left: 388px;
 }
 @media (max-width: 1150px) {
+  .business_item{
+    font-size: 16px;
+    min-height: 35px;
+    line-height: 35px;
+  }  
   .business_pic{
     width: 455px; 
   }  
@@ -596,6 +603,11 @@ if it's not present, don't show loader */
   } 
 }  
 @media (max-width: 992px) {
+  .business_item{
+    font-size: 15px;
+    min-height: 32px;
+    line-height: 32px;
+  }    
   .business_pic{
     width: 380px; 
   }  
@@ -652,7 +664,7 @@ if it's not present, don't show loader */
 .carousel-inner .item {
     width: 100%; /*slider width*/
     font-size: 25px;
-    height: 650px;
+    height: 660px;
 }
 }
 .carousel-content{
@@ -684,16 +696,16 @@ if it's not present, don't show loader */
   border: 1px solid #ffffff;      
 }
 .jobs_title_ch{
-  font-size: 12px;  
-  line-height: 12px;
+  font-size: 14px;  
+  line-height: 14px;
 }
 .jobs_title_en{
-  font-size: 12px;
-  line-height: 12px;
+  font-size: 13px;
+  line-height: 13px;
 }
 .jobs_content{
   position: relative;
-  font-size: 13px;  
+  font-size: 14px;  
   width: 100%;
   color: #ffffff;     
   background: rgba(255, 255, 255, 0);  
@@ -702,11 +714,11 @@ if it's not present, don't show loader */
   border-bottom: 1px solid #ffffff;   
   border-right: 1px solid #ffffff; 
   margin-top: 30px; 
-  min-height: 60px;  
+  min-height: 63px;  
 }
 #hexagon {
   width: 80px;
-  height: 30px;
+  height: 36px;
   background: #ffffff;
   position: relative;
     z-index:1;
@@ -718,25 +730,25 @@ if it's not present, don't show loader */
   display:block;
     position: relative;
     border-right: 10px solid #ffffff;
-    border-top: 15px solid transparent;
-    border-bottom: 15px solid transparent;
+    border-top: 18px solid transparent;
+    border-bottom: 18px solid transparent;
 }
 #hexagon:after {
   content: "";
     right:-80px;
-    top:-30px;
+    top:-36px;
     position: relative;
     display:block;
   border-left: 10px solid #ffffff;
-  border-top: 15px solid transparent;
-  border-bottom: 15px solid transparent;
+  border-top: 18px solid transparent;
+  border-bottom: 18px solid transparent;
 }
 .hex-over {
   color: rgba(45, 72, 139, 1);
   z-index:5;
   position:relative;
   width:100%;
-  top:-25px;
+  top: -30px;
   text-align:center;
   padding:0px 0px 1px 0px;
 }
