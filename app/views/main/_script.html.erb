@@ -142,12 +142,12 @@ function init_map_1(){
 	var myOptions = {
 		styles: styles,
 		zoom:15,
-		center:new google.maps.LatLng(25.0783467,121.32447409999997),
+		center:new google.maps.LatLng(25.0786089,121.3335217),
 		mapTypeId: google.maps.MapTypeId.ROADMAP
 		};
 	map = new google.maps.Map(document.getElementById('gmap_canvas_1'), myOptions);
 	marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(25.0783467,121.32447409999997)});
-	infowindow = new google.maps.InfoWindow({content:'<strong>鴻祐桃園公司</strong><br>蘆竹區山林路三段432-1號<br> 桃園市<br>'});
+	infowindow = new google.maps.InfoWindow({content:'<strong>鴻祐桃園公司</strong><br>蘆竹區山林路三段625巷53號之8<br> 桃園市<br>'});
 	google.maps.event.addListener(marker, 'click', function(){});
 }
 google.maps.event.addDomListener(window, 'load', init_map_1);
